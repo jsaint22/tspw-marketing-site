@@ -145,9 +145,10 @@ export default function WhyFlatFeePage() {
               revenue.
             </p>
             <p>
-              Your agent doesn&apos;t take 1% of your contract. Your attorney
-              doesn&apos;t take 1% of your estate. Why does your financial advisor
-              take 1% of your net worth?
+              Your agent has a role. Your trainer has a role. Your advisor should
+              have one too — not a piece of everything you own. Every specialist
+              on your team gets paid for the work, not a percentage of your
+              success. Your financial advisor should work the same way.
             </p>
           </div>
         </div>

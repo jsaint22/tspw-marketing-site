@@ -13,10 +13,9 @@ const footerLinks = {
     { href: "/cross-border", label: "Cross-Border Planning" },
     { href: "/why-flat-fee", label: "Why Flat Fee" },
     { href: "/for-agents", label: "For Agents" },
+    { href: "/faq", label: "FAQ" },
   ],
-  Learn: [
-    { href: "/blog", label: "Blog" },
-  ],
+  Learn: [{ href: "/blog", label: "Blog" }],
 };
 
 export default function Footer() {
@@ -35,8 +34,33 @@ export default function Footer() {
             />
             <p className="text-white/70 text-sm leading-relaxed max-w-sm">
               The only flat-fee fiduciary advisory firm built exclusively for
-              professional hockey players.
+              professional hockey players. On your team, in your corner.
             </p>
+            {/* Fix 15: Footer newsletter signup */}
+            <div className="mt-4">
+              <p className="text-white/50 text-xs mb-2">
+                Get hockey financial insights delivered.
+              </p>
+              <form
+                action="/api/subscribe"
+                method="POST"
+                className="flex gap-2"
+              >
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                  className="flex-1 px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-secondary"
+                />
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-secondary text-primary text-xs font-semibold rounded-lg hover:bg-secondary/90 transition-colors"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
           </div>
 
           {/* Link columns */}
@@ -78,11 +102,11 @@ export default function Footer() {
             or legal advice, as an offer or solicitation of an offer to buy or
             sell, or as an endorsement of any company, security, fund, or other
             securities or non-securities offering. This information should not be
-            relied upon as the sole factor in an investment-making decision.
-            Tax rates, CBA provisions, and jock tax calculations referenced on
-            this site are for educational purposes only and may not reflect
-            current regulations. Consult a qualified tax professional for
-            advice specific to your situation.
+            relied upon as the sole factor in an investment-making decision. Tax
+            rates, CBA provisions, and jock tax calculations referenced on this
+            site are for educational purposes only and may not reflect current
+            regulations. Consult a qualified tax professional for advice specific
+            to your situation.
           </p>
           <div className="mt-4 flex flex-wrap gap-4 text-xs text-white/50">
             <a
@@ -93,7 +117,10 @@ export default function Footer() {
             >
               Form ADV &amp; firm disclosures on SEC.gov
             </a>
-            <span>&copy; {new Date().getFullYear()} Wealth In Yourself LLC, DBA Top Shelf Private Wealth</span>
+            <span>
+              &copy; {new Date().getFullYear()} Wealth In Yourself LLC, DBA Top
+              Shelf Private Wealth
+            </span>
           </div>
         </div>
       </div>

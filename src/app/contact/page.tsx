@@ -93,7 +93,71 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="mt-12 bg-neutral-bg rounded-xl p-6 text-center">
+          {/* Fix 17: Call expectations */}
+          <div className="mt-10 bg-neutral-bg rounded-xl p-6 sm:p-8">
+            <h3 className="text-lg font-bold text-primary mb-4">
+              After you book your Opening Faceoff call, you&apos;ll receive:
+            </h3>
+            <ul className="space-y-2 text-sm text-neutral-dark/70">
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-primary flex-shrink-0 mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Meeting details with calendar invite
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-primary flex-shrink-0 mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                A short prep questionnaire (5 minutes)
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-primary flex-shrink-0 mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                What to expect during our 30 minutes together
+              </li>
+            </ul>
+            <p className="mt-4 text-sm text-neutral-dark/70 leading-relaxed">
+              The first call is just a conversation. No pitch. No pressure.
+              I&apos;ll ask about your situation, explain how we play the
+              financial specialist position, and we&apos;ll both decide if
+              it&apos;s a fit. If it&apos;s not, I&apos;ll tell you. If it is,
+              we&apos;ll talk about next steps.
+            </p>
+          </div>
+
+          <div className="mt-8 bg-neutral-bg rounded-xl p-6 text-center">
             <p className="text-sm text-neutral-dark/70">
               Prefer email? Reach Josh directly at{" "}
               <span className="font-semibold text-primary">

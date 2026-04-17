@@ -13,8 +13,9 @@ const BOOKING_URL =
 
 const tiers = [
   {
-    name: "Rookie Foundations",
-    range: "Under $500K career earnings",
+    name: "Call-Up",
+    subtitle: "For players getting their shot. Build the foundation right.",
+    range: "Total career earnings under $500K",
     price: "~$12,500",
     period: "/year",
     description:
@@ -30,15 +31,17 @@ const tiers = [
     ],
   },
   {
-    name: "Pro Advisory",
-    range: "$500K–$10M career earnings",
+    name: "Core Four",
+    subtitle:
+      "For players the team is built around. Full financial specialist on your roster.",
+    range: "Total career earnings $500K\u2013$10M",
     price: "~$35,000",
     period: "/year",
     featured: true,
     description:
       "For established players navigating peak earnings, cross-border complexity, and family financial planning.",
     features: [
-      "Everything in Rookie Foundations",
+      "Everything in Call-Up",
       "Cross-border US-Canada tax planning",
       "Advanced investment management",
       "Contract review coordination",
@@ -49,14 +52,16 @@ const tiers = [
     ],
   },
   {
-    name: "Elite Family Office",
-    range: "$10M+ career earnings",
+    name: "Captain",
+    subtitle:
+      "For players whose legacy extends beyond the ice. Full family office coordination.",
+    range: "Total career earnings $10M+",
     price: "Bespoke",
     period: "",
     description:
       "For top-earning players and their families who need full family office coordination and legacy planning.",
     features: [
-      "Everything in Pro Advisory",
+      "Everything in Core Four",
       "Dedicated family office coordination",
       "Multi-entity tax optimization",
       "Philanthropy & foundation strategy",
@@ -71,22 +76,24 @@ const tiers = [
 export default function PricingPage() {
   return (
     <>
+      {/* Fix 3: New pricing hero — no "1%" comparison */}
       <section className="bg-primary py-12 sm:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-secondary font-semibold text-sm uppercase tracking-wider mb-4">
             Transparent Pricing
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
-            Your agent doesn&apos;t take 1% of your contract. Why does your advisor take 1% of your net worth?
+            One position. One flat fee. No AUM. No surprises.
           </h1>
           <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
-            One flat fee. Every service included. The wealthier you get, the
-            less you pay as a percentage. That&apos;s how incentives should work.
+            Your agent gets paid when you get paid. Your trainer gets paid for
+            the work. We believe your advisor should work the same way — paid
+            for the work, not a percentage of everything you&apos;ve ever built.
           </p>
         </div>
       </section>
 
-      {/* Tier cards */}
+      {/* Tier cards — Fix 4 & 5: new names, subtitle, career earnings clarification */}
       <section className="bg-white py-10 sm:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -113,7 +120,14 @@ export default function PricingPage() {
                 </h3>
                 <p
                   className={`text-sm mt-1 ${
-                    tier.featured ? "text-white/60" : "text-steel"
+                    tier.featured ? "text-white/70" : "text-neutral-dark/60"
+                  }`}
+                >
+                  {tier.subtitle}
+                </p>
+                <p
+                  className={`text-xs mt-2 ${
+                    tier.featured ? "text-white/50" : "text-steel"
                   }`}
                 >
                   {tier.range}
@@ -183,74 +197,134 @@ export default function PricingPage() {
               </div>
             ))}
           </div>
+
+          {/* Career earnings tooltip */}
+          <div className="mt-6 max-w-2xl mx-auto">
+            <details className="bg-neutral-bg rounded-lg p-4 border border-neutral-bg">
+              <summary className="text-sm font-semibold text-primary cursor-pointer">
+                Why do we use total career earnings?
+              </summary>
+              <p className="mt-3 text-sm text-neutral-dark/70 leading-relaxed">
+                We use total expected career earnings — not annual — because
+                hockey careers are non-linear. Rookies have signing bonuses.
+                Veterans have multi-year deals. Players get traded, called up,
+                sent down. We look at your trajectory, not last year&apos;s W-2.
+              </p>
+            </details>
+          </div>
         </div>
       </section>
 
-      {/* AUM comparison */}
-      <section className="bg-neutral-bg py-10 sm:py-14" id="calculator">
+      {/* Fix 8: Why Flat Fee Matters — replaces AUM math table */}
+      <section className="bg-neutral-bg py-10 sm:py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="The Math"
-            title="What 1% AUM actually costs a hockey player over a 15-year career."
+            eyebrow="Why Flat Fee"
+            title="Your fee shouldn't depend on how well the team is doing."
           />
-          <div className="mt-8 bg-white rounded-2xl p-6 sm:p-8 border border-neutral-bg">
-            <p className="text-sm text-neutral-dark/70 mb-6 leading-relaxed">
-              A player who earns $10M over a 15-year career, saves 40% of their
-              income, and invests it at a 7% average return. Here&apos;s what 1%
-              AUM costs them versus our flat fee.
+          <div className="mt-8 max-w-3xl mx-auto space-y-5 text-neutral-dark/70 leading-relaxed">
+            <p>
+              Most advisors charge a percentage of what they manage. 1% might
+              sound small. But think about what it really means: your advisor
+              gets paid more when your account grows, regardless of whether they
+              actually helped.
             </p>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-neutral-bg">
-                    <th className="text-left py-3 pr-4 font-semibold text-primary">Year</th>
-                    <th className="text-right py-3 px-4 font-semibold text-primary">Portfolio Value</th>
-                    <th className="text-right py-3 px-4 font-semibold text-accent-red">1% AUM Fee</th>
-                    <th className="text-right py-3 pl-4 font-semibold text-secondary">TSPW Flat Fee</th>
-                  </tr>
-                </thead>
-                <tbody className="text-neutral-dark/70">
-                  {[
-                    { yr: 1, pv: "$267K", aum: "$2,670", flat: "$35,000" },
-                    { yr: 3, pv: "$950K", aum: "$9,500", flat: "$35,000" },
-                    { yr: 5, pv: "$1.8M", aum: "$18,000", flat: "$35,000" },
-                    { yr: 10, pv: "$4.5M", aum: "$45,000", flat: "$35,000" },
-                    { yr: 15, pv: "$8.2M", aum: "$82,000", flat: "$35,000" },
-                  ].map((row) => (
-                    <tr key={row.yr} className="border-b border-neutral-bg/50">
-                      <td className="py-3 pr-4">{row.yr}</td>
-                      <td className="py-3 px-4 text-right">{row.pv}</td>
-                      <td className="py-3 px-4 text-right text-accent-red font-medium">{row.aum}</td>
-                      <td className="py-3 pl-4 text-right text-secondary font-medium">{row.flat}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-neutral-bg rounded-lg p-4">
-                <p className="text-xs text-steel uppercase tracking-wider">Total AUM Fees (15 years)</p>
-                <p className="text-2xl font-bold text-accent-red mt-1">~$450K+</p>
-              </div>
-              <div className="bg-neutral-bg rounded-lg p-4">
-                <p className="text-xs text-steel uppercase tracking-wider">Total TSPW Flat Fees (15 years)</p>
-                <p className="text-2xl font-bold text-secondary mt-1">$525K</p>
-              </div>
-            </div>
-            <p className="mt-4 text-xs text-steel italic">
-              * Illustrative example only. Assumes $10M career earnings, 40%
-              savings rate, 7% average annual return, and constant annual
-              contributions. Actual portfolio values, fees, and returns will vary.
-              AUM fee accumulation compounds — the true cost includes lost growth
-              on fees paid. This is not a guarantee of performance or savings.
-              Consult a qualified financial advisor for advice specific to your situation.
+            <p>
+              Even worse — their incentive is to keep your money in that account.
+              Should you buy a rental property? Pay down your house? Start a
+              business post-career? Gift to your parents? All of those decisions
+              reduce what your AUM advisor earns. That&apos;s a structural
+              conflict of interest baked into their model.
             </p>
+            <p>
+              Your trainer doesn&apos;t get paid more when you gain weight. Your
+              agent doesn&apos;t get paid more when your contract drags on. Your
+              advisor shouldn&apos;t get paid more when you don&apos;t optimize.
+              We charge a flat fee for the work. Period.
+            </p>
+          </div>
+
+          {/* Alignment scenario cards */}
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="bg-white rounded-xl p-6 border border-neutral-bg">
+              <h3 className="text-base font-bold text-primary">
+                Should you buy an investment property?
+              </h3>
+              <p className="mt-3 text-sm text-neutral-dark/70 leading-relaxed">
+                AUM advisor loses fees. We don&apos;t care about your account
+                balance — we care about your plan.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-neutral-bg">
+              <h3 className="text-base font-bold text-primary">
+                Should you pay off your mortgage?
+              </h3>
+              <p className="mt-3 text-sm text-neutral-dark/70 leading-relaxed">
+                AUM advisor loses fees. We help you decide based on your life,
+                not our billing.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-neutral-bg">
+              <h3 className="text-base font-bold text-primary">
+                Should you support your family back home?
+              </h3>
+              <p className="mt-3 text-sm text-neutral-dark/70 leading-relaxed">
+                AUM advisor loses fees. We coordinate your giving without a fee
+                conflict.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fix 4: Hockey-specific pricing FAQ */}
+      <section className="bg-white py-10 sm:py-14">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Common Questions"
+            title="Hockey careers don't fit in a box. Neither does our pricing."
+          />
+          <div className="mt-8 space-y-3">
+            {[
+              {
+                q: "What if I'm mid-career and earnings vary wildly?",
+                a: "That's exactly why we look at trajectory, not a single year. We'll talk through your contract history, where you are in your career, and where you're heading. Your tier is based on a realistic picture of total earnings — not a guess based on one season.",
+              },
+              {
+                q: "What if I'm traded or sent down mid-season?",
+                a: "Your tier doesn't change mid-season. We're on your team regardless of what jersey you're wearing. If your career trajectory changes significantly, we'll revisit at the natural checkpoint — not while you're adjusting to a new city.",
+              },
+              {
+                q: "What if I'm between contracts?",
+                a: "You still have a financial life that needs managing — maybe more than ever. We don't disappear when the income does. Between contracts is often when you need us most. Your fee stays the same because the work doesn't stop.",
+              },
+              {
+                q: "Do I pay the same if I play in the AHL vs NHL?",
+                a: "Your tier is based on total career earnings, not which league you're playing in right now. A call-up who's been in the AHL for three years has different needs than a first-rounder, and our tiers reflect that. We'll figure out the right fit together.",
+              },
+              {
+                q: "How do you handle signing bonus years?",
+                a: "Signing bonuses are part of total career earnings, but we don't penalize you for front-loaded money. A big signing bonus in year one doesn't mean you should be in a higher tier if the rest of the contract evens out. We look at the whole picture.",
+              },
+            ].map((item) => (
+              <details
+                key={item.q}
+                className="bg-neutral-bg rounded-lg border border-neutral-bg"
+              >
+                <summary className="p-4 text-sm font-semibold text-primary cursor-pointer">
+                  {item.q}
+                </summary>
+                <p className="px-4 pb-4 text-sm text-neutral-dark/70 leading-relaxed">
+                  {item.a}
+                </p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
 
       {/* What's included */}
-      <section className="bg-white py-10 sm:py-14">
+      <section className="bg-neutral-bg py-10 sm:py-14">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SectionHeading
             eyebrow="No Hidden Costs"
@@ -269,9 +343,22 @@ export default function PricingPage() {
               "Real estate analysis",
               "Direct advisor access",
             ].map((item) => (
-              <div key={item} className="flex items-center gap-2 text-sm text-neutral-dark/70">
-                <svg className="w-5 h-5 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <div
+                key={item}
+                className="flex items-center gap-2 text-sm text-neutral-dark/70"
+              >
+                <svg
+                  className="w-5 h-5 text-primary flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
                 {item}
               </div>

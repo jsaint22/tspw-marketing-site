@@ -120,9 +120,10 @@ export default function AboutPage() {
             </p>
             <p>
               And the advisors who do work with athletes? Most of them charge AUM
-              fees — taking 1% of your net worth every year regardless of whether
-              the work justifies it. Your agent doesn&apos;t take 1% of your
-              contract. Why does your advisor take 1% of your money?
+              fees — a percentage of your net worth every year regardless of
+              whether the work justifies it. Your agent has a role. Your trainer
+              has a role. Your advisor should have one too — not a piece of
+              everything you own.
             </p>
             <p>
               A fiduciary built exclusively for hockey players didn&apos;t exist.
