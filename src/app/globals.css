@@ -1,26 +1,50 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #1A3329;
+  --color-secondary: #C9A84C;
+  --color-neutral-dark: #0F0F0F;
+  --color-neutral-bg: #F2F5F3;
+  --color-neutral-light: #FFFFFF;
+  --color-accent-red: #C8102E;
+  --color-ice: #E8F1F8;
+  --color-steel: #8A9199;
+  --color-text-on-primary: #FFFFFF;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-neutral-dark: var(--color-neutral-dark);
+  --color-neutral-bg: var(--color-neutral-bg);
+  --color-neutral-light: var(--color-neutral-light);
+  --color-accent-red: var(--color-accent-red);
+  --color-ice: var(--color-ice);
+  --color-steel: var(--color-steel);
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-neutral-light);
+  color: var(--color-neutral-dark);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+details summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
 }
