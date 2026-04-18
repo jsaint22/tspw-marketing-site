@@ -449,6 +449,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* SECTION DIVIDER PLACEHOLDER — below "Why This Exists"
+          Once Josh picks the hero image (Fix 3), add a complementary pond hockey
+          image here as a subtle atmospheric divider. Target: 15-25% opacity,
+          full-width, ~120px tall, bg-cover bg-center. */}
+
       {/* Fix 6: Partner ecosystem — restructured, Holistiplan removed */}
       <section className="bg-white py-10 sm:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -550,28 +555,38 @@ export default function HomePage() {
             3. Replace the placeholder icon divs below with <Image> components.
             NOTE: Some logos may require licensing. Verify usage rights before publishing.
           */}
+          {/*
+            JOSH ACTION REQUIRED: Upload press logos to /public/press/
+            Files needed:
+              - /public/press/forbes.svg
+              - /public/press/marketwatch.svg
+              - /public/press/advisorpedia.svg
+              - /public/press/biggerpockets.svg
+            Once all 4 files are present, swap the text placeholders below
+            for <Image> components pointing to those files.
+          */}
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
             {[
-              { name: "Forbes", icon: "Forbes" },
-              { name: "MarketWatch", icon: "MarketWatch" },
-              { name: "Advisorpedia", icon: "Advisorpedia" },
-              { name: "BiggerPockets", icon: "BiggerPockets" },
+              { name: "Forbes" },
+              { name: "MarketWatch" },
+              { name: "Advisorpedia" },
+              { name: "BiggerPockets" },
             ].map((pub) => (
               <div
                 key={pub.name}
-                className="flex flex-col items-center gap-2 opacity-60 hover:opacity-80 transition-opacity"
+                className="flex flex-col items-center gap-2 opacity-50 hover:opacity-70 transition-opacity"
               >
                 <div className="h-10 flex items-center justify-center px-4">
-                  <span className="text-lg font-bold text-primary tracking-tight">
-                    {pub.icon}
+                  <span className="text-base font-semibold text-primary tracking-wide" style={{ fontFamily: "Georgia, 'Times New Roman', serif", letterSpacing: "0.05em" }}>
+                    {pub.name}
                   </span>
                 </div>
               </div>
             ))}
           </div>
           <p className="mt-4 text-xs text-steel italic text-center">
-            Josh has been featured in leading financial publications on fiduciary
-            advisory. TSPW-specific press coverage in development.
+            Press coverage includes general advisory work. TSPW-specific press
+            mentions in development.
           </p>
 
           {/* Credentials strip */}
@@ -584,7 +599,7 @@ export default function HomePage() {
                 Financial Therapy Association
               </span>
               <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">
-                NAPFA-Aligned Practices
+                Fee-Only Fiduciary
               </span>
               <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">
                 ICF Credentialed Coach
@@ -593,6 +608,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* SECTION DIVIDER PLACEHOLDER — below tier pricing
+          Complementary pond hockey image. Same treatment as above:
+          15-25% opacity, full-width, ~120px tall. */}
 
       {/* Hockey Money Playbook — Fix 13: email capture wired */}
       <section className="bg-ice py-10 sm:py-14">
@@ -649,6 +668,10 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      {/* SECTION DIVIDER PLACEHOLDER — above final CTA
+          Complementary pond hockey image. Same treatment as above:
+          15-25% opacity, full-width, ~120px tall. */}
 
       <CTASection
         headline="Life-changing money should change your life."

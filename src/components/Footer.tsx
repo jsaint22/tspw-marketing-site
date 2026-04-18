@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const footerLinks = {
   Advisory: [
-    { href: "/about", label: "About Josh" },
+    { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
     { href: "/pricing", label: "Pricing" },
     { href: "/contact", label: "Contact" },
@@ -12,10 +12,10 @@ const footerLinks = {
     { href: "/jock-tax", label: "The Jock Tax" },
     { href: "/cross-border", label: "Cross-Border Planning" },
     { href: "/why-flat-fee", label: "Why Flat Fee" },
-    { href: "/for-agents", label: "For Agents" },
     { href: "/faq", label: "FAQ" },
   ],
   Learn: [{ href: "/blog", label: "Blog" }],
+  "For Agents": [{ href: "/for-agents", label: "Agent Partnership" }],
 };
 
 export default function Footer() {

@@ -9,13 +9,11 @@ const BOOKING_URL =
   "https://links.topshelfprivatewealth.com/widget/bookings/opening-faceoff";
 
 const navLinks = [
-  { href: "/about", label: "About Josh" },
+  { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/pricing", label: "Pricing" },
   { href: "/for-agents", label: "For Agents" },
-  { href: "/faq", label: "FAQ" },
   { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navigation() {

@@ -27,6 +27,37 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Video section — "A Minute With Josh" */}
+      <section className="bg-white py-10 sm:py-14">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-steel font-semibold text-sm uppercase tracking-wider mb-4">
+            A Minute With Josh
+          </p>
+          {/*
+            JOSH ACTION REQUIRED: Replace the placeholder below with your video embed.
+            After recording, upload to YouTube/Vimeo and replace the div below with:
+            <iframe
+              src="YOUR_EMBED_URL"
+              className="w-full aspect-video rounded-xl"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          */}
+          <div className="w-full aspect-video rounded-xl bg-neutral-bg border border-neutral-bg flex items-center justify-center">
+            <div className="text-center">
+              <svg className="w-16 h-16 text-steel/30 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p className="text-sm text-steel/50">Video coming soon</p>
+            </div>
+          </div>
+          <p className="mt-4 text-sm text-steel italic">
+            60 seconds on why I built Top Shelf Private Wealth.
+          </p>
+        </div>
+      </section>
+
       {/* Origin story */}
       <section className="bg-white py-10 sm:py-14">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
