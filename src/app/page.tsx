@@ -67,15 +67,29 @@ const partnerTools = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero — Fix 1: reduced padding, gradient bg, larger logo, subhead added */}
-      <section className="relative bg-gradient-to-b from-primary/90 to-primary py-8 sm:py-10 lg:py-12 overflow-hidden">
-        {/* Subtle hockey-atmospheric texture placeholder */}
+      {/* Hero — atmospheric hockey imagery background */}
+      <section className="relative bg-primary py-8 sm:py-10 lg:py-12 overflow-hidden">
+        {/*
+          JOSH ACTION REQUIRED: Add a hero background image.
+          1. Go to Unsplash and search: "pond hockey canada", "frozen lake hockey", "outdoor hockey nets", "pond hockey dusk"
+             Or try Pexels with the same search terms.
+          2. Download a high-quality landscape image (at least 1920px wide).
+          3. Save it as /public/brand/hero-bg.jpg
+          4. Once saved, uncomment the backgroundImage line below and remove the placeholder bg-primary.
+
+          Target aesthetic: frozen pond/lake in Canada with nets set up, no players,
+          early morning or dusk lighting. Evokes pond hockey / roots of the game.
+        */}
         <div
-          className="absolute inset-0 opacity-[0.04] bg-cover bg-center pointer-events-none"
+          className="absolute inset-0 bg-cover bg-center pointer-events-none"
           style={{
-            backgroundImage:
-              "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Cellipse cx=%22200%22 cy=%22200%22 rx=%22180%22 ry=%22100%22 fill=%22none%22 stroke=%22%23fff%22 stroke-width=%222%22/%3E%3Cline x1=%22200%22 y1=%2210%22 x2=%22200%22 y2=%22390%22 stroke=%22%23fff%22 stroke-width=%221%22/%3E%3Ccircle cx=%22200%22 cy=%22200%22 r=%2230%22 fill=%22none%22 stroke=%22%23fff%22 stroke-width=%221.5%22/%3E%3C/svg%3E')",
+            /* backgroundImage: "url('/brand/hero-bg.jpg')", */
           }}
+          aria-hidden="true"
+        />
+        {/* Dark forest green overlay for text readability */}
+        <div
+          className="absolute inset-0 bg-primary/60 pointer-events-none"
           aria-hidden="true"
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -361,7 +375,7 @@ export default function HomePage() {
             <div>
               <SectionHeading
                 eyebrow="Why This Exists"
-                title="I watched the financial industry take advantage of players for too long. Then I built the position that was missing."
+                title="I watched the financial industry underserve hockey players for too long. Then I built the position that was missing."
                 centered={false}
               />
               <div className="mt-6 space-y-4 text-neutral-dark/70 leading-relaxed">
@@ -370,8 +384,9 @@ export default function HomePage() {
                   because the commission was bigger. Your buddy&apos;s CPA has
                   never filed a jock tax return in his life. The &ldquo;financial
                   planner&rdquo; your agent mentioned is getting a kickback on
-                  every dollar he recommends you save. I&apos;ve seen it all. I
-                  left the industry because of it.
+                  every dollar he recommends you save. I&apos;ve seen all of it.
+                  I&apos;m not walking away from the industry — I&apos;m changing
+                  how it works from the inside, starting with hockey players.
                 </p>
                 <p>
                   Here&apos;s what I realized: you already have a team off the
@@ -524,23 +539,33 @@ export default function HomePage() {
       <section className="bg-white py-10 sm:py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading eyebrow="Featured In" title="Trusted expertise." />
+          {/*
+            JOSH ACTION REQUIRED: Replace placeholder logos with actual publication logos.
+            1. Source logos from each publication's press/brand portal:
+               - Forbes: https://www.forbes.com/press (or search "Forbes logo press kit")
+               - MarketWatch: search "MarketWatch brand assets"
+               - Advisorpedia: contact or download from their site
+               - BiggerPockets: https://www.biggerpockets.com/press
+            2. Save logos as SVG or PNG in /public/press/ (e.g., /public/press/forbes.svg)
+            3. Replace the placeholder icon divs below with <Image> components.
+            NOTE: Some logos may require licensing. Verify usage rights before publishing.
+          */}
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
             {[
-              { name: "Forbes", icon: "F" },
-              { name: "MarketWatch", icon: "MW" },
-              { name: "Advisorpedia", icon: "AP" },
-              { name: "BiggerPockets", icon: "BP" },
+              { name: "Forbes", icon: "Forbes" },
+              { name: "MarketWatch", icon: "MarketWatch" },
+              { name: "Advisorpedia", icon: "Advisorpedia" },
+              { name: "BiggerPockets", icon: "BiggerPockets" },
             ].map((pub) => (
               <div
                 key={pub.name}
-                className="flex flex-col items-center gap-2 opacity-70"
+                className="flex flex-col items-center gap-2 opacity-60 hover:opacity-80 transition-opacity"
               >
-                <div className="w-16 h-16 rounded-lg bg-neutral-bg flex items-center justify-center">
-                  <span className="text-xl font-bold text-primary">
+                <div className="h-10 flex items-center justify-center px-4">
+                  <span className="text-lg font-bold text-primary tracking-tight">
                     {pub.icon}
                   </span>
                 </div>
-                <p className="text-xs font-semibold text-steel">{pub.name}</p>
               </div>
             ))}
           </div>
@@ -559,7 +584,7 @@ export default function HomePage() {
                 Financial Therapy Association
               </span>
               <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">
-                XY Planning Network
+                NAPFA-Aligned Practices
               </span>
               <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">
                 ICF Credentialed Coach

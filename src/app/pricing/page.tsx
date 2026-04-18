@@ -219,7 +219,7 @@ export default function PricingPage() {
       <section className="bg-neutral-bg py-10 sm:py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Why Flat Fee"
+            eyebrow="Why Flat Fee Matters When You Have a Team"
             title="Your fee shouldn't depend on how well the team is doing."
           />
           <div className="mt-8 max-w-3xl mx-auto space-y-5 text-neutral-dark/70 leading-relaxed">
@@ -237,10 +237,11 @@ export default function PricingPage() {
               conflict of interest baked into their model.
             </p>
             <p>
-              Your trainer doesn&apos;t get paid more when you gain weight. Your
-              agent doesn&apos;t get paid more when your contract drags on. Your
-              advisor shouldn&apos;t get paid more when you don&apos;t optimize.
-              We charge a flat fee for the work. Period.
+              Every specialist on your team gets paid for the work they do.
+              Your trainer gets paid for conditioning. Your agent gets paid for
+              negotiating. Your advisor should get paid for planning — not for
+              the size of your portfolio. We charge a flat fee for the work.
+              Period.
             </p>
           </div>
 
@@ -292,7 +293,7 @@ export default function PricingPage() {
               },
               {
                 q: "What if I'm traded or sent down mid-season?",
-                a: "Your tier doesn't change mid-season. We're on your team regardless of what jersey you're wearing. If your career trajectory changes significantly, we'll revisit at the natural checkpoint — not while you're adjusting to a new city.",
+                a: "Your tier doesn't change mid-season. We're on your team regardless of what jersey you're wearing. We revisit your tier each summer during off-season review — the natural time to look at the year behind and the year ahead. Contract changes, unexpected bonuses, or new family situations can trigger an earlier conversation, but the default cadence follows the hockey calendar.",
               },
               {
                 q: "What if I'm between contracts?",

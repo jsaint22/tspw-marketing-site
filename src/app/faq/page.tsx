@@ -22,7 +22,7 @@ const faqCategories = [
       },
       {
         q: "Why hockey players specifically?",
-        a: "Because the financial complexity hockey players face is unique — and uniquely underserved. Jock tax across 15+ jurisdictions. Cross-border US-Canada planning. A 10-15 year earning window that has to fund the next 50 years. Most advisors have never seen this. Josh grew up with a rink in his front yard and has been in the hockey world his entire life. This isn't a niche he chose — it's a world he knows.",
+        a: "Because the financial complexity hockey players face is unique — and uniquely underserved. Jock tax across multiple state and provincial jurisdictions. Cross-border US-Canada planning. A 10-15 year earning window that has to fund the next 50 years. Most advisors have never seen this. Josh grew up with a rink in his front yard and has been in the hockey world his entire life. This isn't a niche he chose — it's a world he knows.",
       },
     ],
   },
@@ -39,7 +39,7 @@ const faqCategories = [
       },
       {
         q: "Can my tier change over time?",
-        a: "Yes. If your career trajectory changes significantly — you sign a major new contract, or your career winds down — we'll revisit the tier together at a natural checkpoint. We don't change tiers mid-season or mid-crisis. The goal is a fair fee for the work, not a gotcha.",
+        a: "Yes. We revisit your tier each summer during off-season review — the natural time to look at the year behind and the year ahead. Contract changes, unexpected bonuses, or new family situations can trigger an earlier conversation, but the default cadence follows the hockey calendar. We don't change tiers mid-season or mid-crisis. The goal is a fair fee for the work, not a gotcha.",
       },
       {
         q: "What if my career earnings change dramatically?",
@@ -52,7 +52,7 @@ const faqCategories = [
     questions: [
       {
         q: "What is jock tax?",
-        a: "Every game you play in a different state or province triggers a separate tax obligation in that jurisdiction. A single NHL season can require filings in 15-20 states. It's called the \"jock tax\" and it's the most expensive financial reality in professional hockey that most accountants have never heard of.",
+        a: "Every game you play in a different state or province triggers a separate tax obligation in that jurisdiction. Most NHL players file tax returns in 8-18 state and provincial jurisdictions per season, depending on division alignment, cross-border travel, and postseason play. Exact count varies year-to-year and by individual player. It's called the \"jock tax\" and it's the most expensive financial reality in professional hockey that most accountants have never heard of.",
       },
       {
         q: "How does cross-border US-Canada planning work?",
@@ -60,7 +60,7 @@ const faqCategories = [
       },
       {
         q: "What states do I need to file in?",
-        a: "Every state where you play a game and that state has an income tax. For most NHL players, that means 12-18 state returns per year, plus your home state, plus federal. We track every game, every jurisdiction, and coordinate the whole thing.",
+        a: "Every state where you play a game and that state has an income tax. Most NHL players file in 8-18 state and provincial jurisdictions per season, depending on division alignment, cross-border travel, and postseason play — plus your home state, plus federal. Exact count varies year-to-year and by individual player. We track every game, every jurisdiction, and coordinate the whole thing.",
       },
       {
         q: "How do signing bonuses get taxed?",

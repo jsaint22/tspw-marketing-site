@@ -25,14 +25,14 @@ export default function Navigation() {
   return (
     <header className="sticky top-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-white/10">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-20 sm:h-24">
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/brand/tspw-logo.png"
               alt="Top Shelf Private Wealth"
-              width={180}
-              height={60}
-              className="h-12 sm:h-14 w-auto"
+              width={250}
+              height={83}
+              className="h-16 sm:h-20 w-auto max-w-[200px] sm:max-w-none"
               priority
             />
           </Link>
