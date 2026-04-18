@@ -69,25 +69,15 @@ export default function HomePage() {
     <>
       {/* Hero — atmospheric hockey imagery background */}
       <section className="relative bg-primary py-8 sm:py-10 lg:py-12 overflow-hidden">
-        {/*
-          JOSH ACTION REQUIRED: Add a hero background image.
-          1. Go to Unsplash and search: "pond hockey canada", "frozen lake hockey", "outdoor hockey nets", "pond hockey dusk"
-             Or try Pexels with the same search terms.
-          2. Download a high-quality landscape image (at least 1920px wide).
-          3. Save it as /public/brand/hero-bg.jpg
-          4. Once saved, uncomment the backgroundImage line below and remove the placeholder bg-primary.
-
-          Target aesthetic: frozen pond/lake in Canada with nets set up, no players,
-          early morning or dusk lighting. Evokes pond hockey / roots of the game.
-        */}
+        {/* Hero image: Taylor Friehl via Unsplash (free license, no attribution required). */}
         <div
           className="absolute inset-0 bg-cover bg-center pointer-events-none"
           style={{
-            /* backgroundImage: "url('/brand/hero-bg.jpg')", */
+            backgroundImage: "url('/brand/hero-bg.jpg')",
           }}
           aria-hidden="true"
         />
-        {/* Dark forest green overlay for text readability */}
+        {/* Dark forest green overlay for text readability (60% opacity, WCAG AA compliant) */}
         <div
           className="absolute inset-0 bg-primary/60 pointer-events-none"
           aria-hidden="true"
@@ -544,42 +534,25 @@ export default function HomePage() {
       <section className="bg-white py-10 sm:py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading eyebrow="Featured In" title="Trusted expertise." />
-          {/*
-            JOSH ACTION REQUIRED: Replace placeholder logos with actual publication logos.
-            1. Source logos from each publication's press/brand portal:
-               - Forbes: https://www.forbes.com/press (or search "Forbes logo press kit")
-               - MarketWatch: search "MarketWatch brand assets"
-               - Advisorpedia: contact or download from their site
-               - BiggerPockets: https://www.biggerpockets.com/press
-            2. Save logos as SVG or PNG in /public/press/ (e.g., /public/press/forbes.svg)
-            3. Replace the placeholder icon divs below with <Image> components.
-            NOTE: Some logos may require licensing. Verify usage rights before publishing.
-          */}
-          {/*
-            JOSH ACTION REQUIRED: Upload press logos to /public/press/
-            Files needed:
-              - /public/press/forbes.svg
-              - /public/press/marketwatch.svg
-              - /public/press/advisorpedia.svg
-              - /public/press/biggerpockets.svg
-            Once all 4 files are present, swap the text placeholders below
-            for <Image> components pointing to those files.
-          */}
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
             {[
-              { name: "Forbes" },
-              { name: "MarketWatch" },
-              { name: "Advisorpedia" },
-              { name: "BiggerPockets" },
+              { name: "Forbes", logo: "/press/Forbes.png" },
+              { name: "MarketWatch", logo: "/press/marketwatch.png" },
+              { name: "Advisorpedia", logo: "/press/Advisorpedia Logo.jpeg" },
+              { name: "BiggerPockets", logo: "/press/BiggerPockets.png" },
             ].map((pub) => (
               <div
                 key={pub.name}
-                className="flex flex-col items-center gap-2 opacity-50 hover:opacity-70 transition-opacity"
+                className="flex flex-col items-center gap-2 opacity-60 hover:opacity-90 transition-opacity"
               >
                 <div className="h-10 flex items-center justify-center px-4">
-                  <span className="text-base font-semibold text-primary tracking-wide" style={{ fontFamily: "Georgia, 'Times New Roman', serif", letterSpacing: "0.05em" }}>
-                    {pub.name}
-                  </span>
+                  <Image
+                    src={pub.logo}
+                    alt={pub.name}
+                    width={140}
+                    height={40}
+                    className="max-h-10 w-auto object-contain grayscale"
+                  />
                 </div>
               </div>
             ))}
