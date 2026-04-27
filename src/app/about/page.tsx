@@ -185,8 +185,8 @@ export default function AboutPage() {
               },
               {
                 abbr: "APFC\u00AE",
-                name: "Accredited Portfolio Financial Counselor",
-                desc: "Advanced investment counseling and portfolio strategy.",
+                name: "Accredited Personal Financial Coach",
+                desc: "Advanced financial coaching and behavioral change strategy.",
               },
               {
                 abbr: "ACC",

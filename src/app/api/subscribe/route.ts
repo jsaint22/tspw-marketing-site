@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
 
 export async function POST(request: NextRequest) {
   try {
@@ -11,19 +9,11 @@ export async function POST(request: NextRequest) {
       return NextResponse.redirect(new URL("/?subscribed=error", request.url));
     }
 
-    // Append to a local subscribers file (simple file-based storage)
-    const subscribersPath = path.join(process.cwd(), "subscribers.json");
-    let subscribers: string[] = [];
+    // Log subscriber for Vercel Function logs (file writes don't persist on serverless)
+    console.log(`[SUBSCRIBE] New email subscriber: ${email} at ${new Date().toISOString()}`);
 
-    if (fs.existsSync(subscribersPath)) {
-      const raw = fs.readFileSync(subscribersPath, "utf-8");
-      subscribers = JSON.parse(raw);
-    }
-
-    if (!subscribers.includes(email)) {
-      subscribers.push(email);
-      fs.writeFileSync(subscribersPath, JSON.stringify(subscribers, null, 2));
-    }
+    // TODO: Wire to GHL contact creation or email marketing platform
+    // For now, subscribers are captured in Vercel Function logs
 
     return NextResponse.redirect(new URL("/?subscribed=true", request.url));
   } catch {
