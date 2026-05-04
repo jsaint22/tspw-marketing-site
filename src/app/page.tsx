@@ -32,10 +32,10 @@ export default function ComingSoonPage() {
       </p>
       <p style={{ fontSize: "1.125rem", marginBottom: "3rem" }}>
         <a
-          href="mailto:josh@wealthinyourself.com"
+          href="mailto:josh@topshelfprivatewealth.com"
           style={{ color: "#1a1a1a", textDecoration: "underline" }}
         >
-          josh@wealthinyourself.com
+          josh@topshelfprivatewealth.com
         </a>
       </p>
       <hr
