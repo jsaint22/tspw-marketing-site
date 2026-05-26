@@ -8,9 +8,12 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 const contentDir = path.join(process.cwd(), "src/content/blog");
 
 function getPost(slug: string) {
-  const filePath = path.join(contentDir, `${slug}.mdx`);
-  if (!fs.existsSync(filePath)) return null;
-  const raw = fs.readFileSync(filePath, "utf-8");
+  if (!fs.existsSync(contentDir)) return null;
+  const files = fs.readdirSync(contentDir).filter((f) => f.endsWith(".mdx"));
+  const file = files.find((f) => f.replace(/\.mdx$/, "") === slug);
+  if (!file) return null;
+  // nosemgrep: javascript.lang.security.audit.path-traversal.path-join-resolve-traversal.path-join-resolve-traversal -- file from readdirSync of fixed contentDir, filtered to .mdx; slug is used only as a lookup key, never concatenated into the path
+  const raw = fs.readFileSync(path.join(contentDir, file), "utf-8");
   const { data, content } = matter(raw);
   return { data, content };
 }
