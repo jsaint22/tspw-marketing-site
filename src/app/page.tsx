@@ -55,9 +55,9 @@ const tiers = [
 
 const partnerTools = [
   { name: "Altruist", desc: "Custody & cross-border capability" },
-  { name: "RightCapital", desc: "Comprehensive financial planning" },
-  { name: "Monarch Money", desc: "Cash flow & budgeting" },
-  { name: "Sequence", desc: "Financial life planning" },
+  { name: "RightCapital", desc: "Financial planning software" },
+  { name: "Monarch Money", desc: "Budgeting & net worth tracking" },
+  { name: "Sequence", desc: "Cash flow mapping" },
   {
     name: "Cross-Border CPA Specialists",
     desc: "Partner network of CPAs with NHL/AHL experience",
@@ -94,16 +94,11 @@ export default function HomePage() {
                   Your window to act is now.
                 </span>
               </h1>
-              <p className="mt-4 text-lg text-white/80 leading-relaxed max-w-xl">
+              <p className="mt-5 text-lg text-white/85 leading-relaxed max-w-xl">
                 Every elite hockey player has a team off the ice. We&apos;re the
                 position that&apos;s been missing.
               </p>
-              <p className="mt-3 text-base text-white/60 leading-relaxed max-w-xl">
-                The only flat-fee fiduciary advisory firm built exclusively for
-                professional hockey players. No AUM fees. No conflicts. Just a
-                financial plan built around a career that demands urgency.
-              </p>
-              <div className="mt-6 flex flex-col sm:flex-row gap-4">
+              <div className="mt-7 flex flex-col sm:flex-row gap-4">
                 <a
                   href={BOOKING_URL}
                   target="_blank"
@@ -119,15 +114,6 @@ export default function HomePage() {
                   See Pricing
                 </Link>
               </div>
-              <p className="mt-4 text-sm text-white/50">
-                Not ready to book?{" "}
-                <Link
-                  href="/blog"
-                  className="underline hover:text-white/70 transition-colors"
-                >
-                  Read the blog &rarr;
-                </Link>
-              </p>
             </div>
             <div className="relative flex justify-center">
               <div className="w-80 h-80 sm:w-96 sm:h-96 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
@@ -534,7 +520,7 @@ export default function HomePage() {
       <section className="bg-white py-10 sm:py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading eyebrow="Featured In" title="Trusted expertise." />
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-8 items-center">
             {[
               { name: "Forbes", logo: "/press/Forbes.png" },
               { name: "MarketWatch", logo: "/press/marketwatch.png" },
@@ -543,17 +529,16 @@ export default function HomePage() {
             ].map((pub) => (
               <div
                 key={pub.name}
-                className="flex flex-col items-center gap-2 opacity-60 hover:opacity-90 transition-opacity"
+                className="h-12 flex items-center justify-center px-2 opacity-70 hover:opacity-100 transition-opacity"
               >
-                <div className="h-10 flex items-center justify-center px-4">
-                  <Image
-                    src={pub.logo}
-                    alt={pub.name}
-                    width={140}
-                    height={40}
-                    className="max-h-10 w-auto object-contain grayscale"
-                  />
-                </div>
+                <Image
+                  src={pub.logo}
+                  alt={pub.name}
+                  width={160}
+                  height={48}
+                  className="max-h-12 max-w-full w-auto object-contain"
+                  style={{ filter: "grayscale(1) contrast(0.9)", mixBlendMode: "luminosity" }}
+                />
               </div>
             ))}
           </div>
@@ -564,19 +549,13 @@ export default function HomePage() {
 
           {/* Credentials strip */}
           <div className="mt-8 pt-8 border-t border-neutral-bg">
-            <div className="flex flex-wrap justify-center gap-4 text-xs text-steel">
-              <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">
-                CFP Board Certificant
-              </span>
-              <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">
-                Financial Therapy Association
-              </span>
-              <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">
-                Fee-Only Fiduciary
-              </span>
-              <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">
-                ICF Credentialed Coach
-              </span>
+            <div className="flex flex-wrap justify-center gap-3 text-xs text-steel">
+              <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">CFP&reg;</span>
+              <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">CFT&trade;</span>
+              <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">APFC&reg;</span>
+              <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">ACC</span>
+              <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">MS Financial Life Planning</span>
+              <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">Fee-Only Fiduciary</span>
             </div>
           </div>
         </div>
@@ -617,7 +596,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Fix 10: Agent-specific section */}
+      {/* Fix 10: Agent-specific section — softened CTA to inline link
+          (was big primary button stacked above CTASection's Opening Faceoff;
+          two heavy CTAs in a row created visual collision per Josh review) */}
       <section className="bg-white py-10 sm:py-14 border-t-2 border-secondary/20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-secondary font-semibold text-sm uppercase tracking-wider mb-2">
@@ -635,16 +616,12 @@ export default function HomePage() {
           </p>
           <Link
             href="/for-agents"
-            className="inline-block mt-6 px-8 py-3.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+            className="inline-block mt-6 text-primary font-semibold hover:text-secondary transition-colors"
           >
             See how TSPW supports agents &rarr;
           </Link>
         </div>
       </section>
-
-      {/* SECTION DIVIDER PLACEHOLDER — above final CTA
-          Complementary pond hockey image. Same treatment as above:
-          15-25% opacity, full-width, ~120px tall. */}
 
       <CTASection
         headline="Life-changing money should change your life."
