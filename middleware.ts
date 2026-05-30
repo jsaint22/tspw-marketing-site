@@ -3,7 +3,8 @@ import type { NextRequest } from "next/server";
 
 /**
  * Coming-soon mode: redirect every public path to the homepage.
- * Allows through: /, /_next/*, /favicon.ico, /brand/* (logo), /api/*
+ * Allows through: /, /_next/*, /favicon.ico, /brand/* (logo), /api/*,
+ * and /intake/* (TSPW prospect intake — 2026-05-30 build, link-only access).
  */
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -14,7 +15,9 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/_next") ||
     pathname.startsWith("/favicon") ||
     pathname.startsWith("/brand") ||
-    pathname.startsWith("/api")
+    pathname.startsWith("/api") ||
+    pathname === "/intake" ||
+    pathname.startsWith("/intake/")
   ) {
     return NextResponse.next();
   }
