@@ -6,7 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 export const metadata: Metadata = {
   title: "About Josh",
   description:
-    "Joshua St. Laurent, CFP, CFT, APFC — the hockey-native financial planner who left Fidelity to build something better for professional hockey players.",
+    "Joshua St. Laurent, CFP, CFT, APFC — the hockey-native financial planner who left the brokerage world to build something better for professional hockey players.",
 };
 
 export default function AboutPage() {
@@ -84,16 +84,17 @@ export default function AboutPage() {
 
           <div className="mt-10">
             <SectionHeading
-              eyebrow="The Fidelity Story"
+              eyebrow="Why I Left"
               title="I watched advisors take off their fiduciary hat and put on their sales hat in the same conversation."
               centered={false}
             />
             <div className="mt-6 space-y-5 text-neutral-dark/80 leading-relaxed">
               <p>
-                At Fidelity, I was stuck in a system built to serve the firm, not
-                the client. Too many clients, impossible to go deep with any of
-                them. Constant pressure to sell products clients didn&apos;t need,
-                from a manager who had never sat across from a client in his life.
+                At my last firm, I was stuck in a system built to serve the firm,
+                not the client. Too many clients, impossible to go deep with any
+                of them. Constant pressure to sell products clients didn&apos;t
+                need, from a manager who had never sat across from a client in
+                his life.
               </p>
               <p>
                 The clearest signal that the system was broken? Advisors legally
