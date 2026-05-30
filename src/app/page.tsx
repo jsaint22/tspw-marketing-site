@@ -450,17 +450,15 @@ export default function HomePage() {
               >
                 {tool.domain ? (
                   // Logo via Clearbit's logo CDN. <img> instead of next/image to avoid
-                  // remote-pattern whitelist. Falls back to alt text if image fails.
+                  // remote-pattern whitelist. (No onError handler — Server Component
+                  // can't pass event handlers. If Clearbit 404s, browser shows native
+                  // broken-image icon briefly; alt text + name + desc still readable.)
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={`https://logo.clearbit.com/${tool.domain}`}
                     alt={tool.name}
                     className="h-8 w-auto object-contain"
                     loading="lazy"
-                    onError={(e) => {
-                      // Hide broken image; sibling text-name still shows
-                      (e.currentTarget as HTMLImageElement).style.display = "none";
-                    }}
                   />
                 ) : (
                   <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
