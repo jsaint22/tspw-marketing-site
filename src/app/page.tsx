@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
+import { RevealOnScroll } from "@/components/cinematic/RevealOnScroll";
+import { CountUpMetric } from "@/components/cinematic/CountUpMetric";
 
 const BOOKING_URL =
   "https://links.topshelfprivatewealth.com/widget/bookings/opening-faceoff";
@@ -54,13 +56,14 @@ const tiers = [
 ];
 
 const partnerTools = [
-  { name: "Altruist", desc: "Custody & cross-border capability" },
-  { name: "RightCapital", desc: "Financial planning software" },
-  { name: "Monarch Money", desc: "Budgeting & net worth tracking" },
-  { name: "Sequence", desc: "Cash flow mapping" },
+  { name: "Altruist", desc: "Custody & cross-border capability", domain: "altruist.com" },
+  { name: "RightCapital", desc: "Financial planning software", domain: "rightcapital.com" },
+  { name: "Monarch Money", desc: "Budgeting & net worth tracking", domain: "monarchmoney.com" },
+  { name: "Sequence", desc: "Cash flow mapping", domain: "sequence.io" },
   {
     name: "Cross-Border CPA Specialists",
     desc: "Partner network of CPAs with NHL/AHL experience",
+    domain: null,
   },
 ];
 
@@ -243,10 +246,10 @@ export default function HomePage() {
             subtitle="Your agent has a role. Your trainer has a role. Your advisor should have one too — not a piece of everything you own."
           />
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {tiers.map((tier) => (
+            {tiers.map((tier, index) => (
+              <RevealOnScroll key={tier.name} delay={index * 0.08} className="h-full">
               <div
-                key={tier.name}
-                className={`rounded-xl p-6 sm:p-8 border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                className={`h-full rounded-xl p-6 sm:p-8 border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
                   tier.featured
                     ? "border-secondary bg-primary text-white ring-2 ring-secondary shadow-md"
                     : "border-neutral-bg bg-neutral-bg hover:bg-white"
@@ -325,6 +328,7 @@ export default function HomePage() {
                   Book Your Opening Faceoff
                 </a>
               </div>
+              </RevealOnScroll>
             ))}
           </div>
           {/* Career earnings tooltip */}
@@ -344,8 +348,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Fix 7: Why This Exists — rewritten with team metaphor */}
-      <section className="bg-neutral-bg py-10 sm:py-14">
+      {/* Fix 7: Why This Exists — rewritten with team metaphor; gradient bg for variety */}
+      <section className="py-10 sm:py-14 bg-gradient-to-bl from-primary/5 via-neutral-bg to-secondary/8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
@@ -439,14 +443,36 @@ export default function HomePage() {
             subtitle="Every specialist has their gear. Here's ours."
           />
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            {partnerTools.map((tool) => (
+            {partnerTools.map((tool, index) => (
+              <RevealOnScroll key={tool.name} delay={index * 0.06} className="h-full">
               <div
-                key={tool.name}
-                className="bg-neutral-bg rounded-xl p-4 text-center border border-neutral-bg"
+                className="h-full bg-white rounded-xl p-5 text-center border border-neutral-bg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-start gap-3"
               >
+                {tool.domain ? (
+                  // Logo via Clearbit's logo CDN. <img> instead of next/image to avoid
+                  // remote-pattern whitelist. Falls back to alt text if image fails.
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={`https://logo.clearbit.com/${tool.domain}`}
+                    alt={tool.name}
+                    className="h-8 w-auto object-contain"
+                    loading="lazy"
+                    onError={(e) => {
+                      // Hide broken image; sibling text-name still shows
+                      (e.currentTarget as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                ) : (
+                  <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
+                    <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                )}
                 <p className="font-bold text-primary text-sm">{tool.name}</p>
-                <p className="text-xs text-steel mt-1">{tool.desc}</p>
+                <p className="text-xs text-steel">{tool.desc}</p>
               </div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>
@@ -470,23 +496,23 @@ export default function HomePage() {
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-              <div className="bg-neutral-bg rounded-lg p-4">
+              <div className="bg-neutral-bg rounded-lg p-5 hover:shadow-sm transition-shadow">
                 <p className="text-xs text-steel uppercase tracking-wider">
                   Career Earnings
                 </p>
-                <p className="text-xl font-bold text-primary mt-1">$1.2M</p>
+                <CountUpMetric value={1.2} prefix="$" suffix="M" duration={1200} className="text-3xl font-bold text-primary mt-2 block" />
               </div>
-              <div className="bg-neutral-bg rounded-lg p-4">
+              <div className="bg-neutral-bg rounded-lg p-5 hover:shadow-sm transition-shadow">
                 <p className="text-xs text-steel uppercase tracking-wider">
                   Tax Saved (Year 1)
                 </p>
-                <p className="text-xl font-bold text-accent-red mt-1">$34K</p>
+                <CountUpMetric value={34} prefix="$" suffix="K" duration={1400} delay={150} className="text-3xl font-bold text-accent-red mt-2 block" />
               </div>
-              <div className="bg-neutral-bg rounded-lg p-4">
+              <div className="bg-neutral-bg rounded-lg p-5 hover:shadow-sm transition-shadow">
                 <p className="text-xs text-steel uppercase tracking-wider">
                   AUM Fees Avoided
                 </p>
-                <p className="text-xl font-bold text-primary mt-1">$8K/yr</p>
+                <CountUpMetric value={8} prefix="$" suffix="K/yr" duration={1100} delay={300} className="text-3xl font-bold text-primary mt-2 block" />
               </div>
             </div>
             <p className="text-sm text-neutral-dark/70 leading-relaxed">
@@ -520,7 +546,7 @@ export default function HomePage() {
       <section className="bg-white py-10 sm:py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading eyebrow="Featured In" title="Trusted expertise." />
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-8 items-center">
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-10 items-center">
             {[
               { name: "Forbes", logo: "/press/Forbes.png" },
               { name: "MarketWatch", logo: "/press/marketwatch.png" },
@@ -529,14 +555,14 @@ export default function HomePage() {
             ].map((pub) => (
               <div
                 key={pub.name}
-                className="h-14 flex items-center justify-center px-2 transition-transform hover:scale-105"
+                className="h-20 flex items-center justify-center px-4 transition-transform hover:scale-105"
               >
                 <Image
                   src={pub.logo}
                   alt={pub.name}
-                  width={180}
-                  height={56}
-                  className="max-h-14 max-w-full w-auto object-contain"
+                  width={240}
+                  height={80}
+                  className="max-h-20 max-w-full w-auto object-contain"
                 />
               </div>
             ))}
