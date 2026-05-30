@@ -93,8 +93,7 @@ export default function AboutPage() {
                 At my last firm, I was stuck in a system built to serve the firm,
                 not the client. Too many clients, impossible to go deep with any
                 of them. Constant pressure to sell products clients didn&apos;t
-                need, from a manager who had never sat across from a client in
-                his life.
+                need, from managers who had never sat across from a client.
               </p>
               <p>
                 The clearest signal that the system was broken? Advisors legally
@@ -145,8 +144,8 @@ export default function AboutPage() {
             <p>
               Hockey players face a financial reality unlike almost anyone else.
               You have 10 to 15 years to earn what most people earn over 40. The
-              jock tax alone costs players thousands every year — and most
-              accountants don&apos;t know it exists. Cross-border complexity between
+              jock tax alone is something most players overpay on without
+              realizing it — and most accountants don&apos;t know it exists. Cross-border complexity between
               the US and Canada creates situations most financial advisors have
               never seen.
             </p>
