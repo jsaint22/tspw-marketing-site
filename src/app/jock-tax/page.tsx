@@ -37,20 +37,23 @@ export default function JockTaxPage() {
           />
           <div className="mt-6 space-y-5 text-neutral-dark/80 leading-relaxed">
             <p>
-              The &ldquo;jock tax&rdquo; is a colloquial term for the income tax
-              that states and provinces levy on professional athletes for income
-              earned within their borders. If you play a game in California,
-              California wants a piece of the income you earned that day — even
-              if you live in Nevada, Florida, or Alberta.
+              One of the biggest levers you have financially is managing all the
+              taxes you have to pay. Jock tax is the term we use for all the
+              different state tax returns you&apos;re required to file as a
+              hockey player. If we can get creative and offset some or all of
+              those taxes, it could mean a substantial amount back in your
+              pocket.
             </p>
             <p>
-              For hockey players, this means filing tax returns in every state
-              and province where you played a road game during the season. Most
-              NHL players typically file in 8 to 18 state and provincial
-              jurisdictions per season, depending on division alignment,
-              cross-border travel, and postseason play — exact count varies
-              year-to-year and by individual player. AHL and ECHL players face
-              similar complexity with even tighter margins.
+              If you play a game in California, California wants a piece of the
+              income you earned that day — even if you live in Nevada, Florida,
+              or Alberta. For hockey players, this means filing tax returns in
+              every state and province where you played a road game during the
+              season. Most NHL players typically file in 8 to 18 state and
+              provincial jurisdictions per season, depending on division
+              alignment, cross-border travel, and postseason play — exact count
+              varies year-to-year and by individual player. AHL and ECHL players
+              face similar complexity with even tighter margins.
             </p>
           </div>
         </div>

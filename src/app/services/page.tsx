@@ -54,7 +54,7 @@ const services = [
   {
     title: "Investment Planning",
     description:
-      "Low-cost, evidence-based portfolios. No proprietary products. No commissions. Your investments are custodied at Altruist, managed with your specific timeline and cross-border needs in mind. We build for the decades after hockey, not just the years during it.",
+      "Low-cost, broadly diversified portfolios built for the long arc — not chasing returns. No proprietary products. No commissions. Your investments are custodied at Altruist, managed with your specific timeline and cross-border needs in mind. We build for the decades after hockey, not just the years during it.",
     icon: "M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z",
   },
 ];
@@ -116,21 +116,31 @@ export default function ServicesPage() {
       <section className="bg-neutral-bg py-10 sm:py-14">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SectionHeading
-            eyebrow="The Difference"
-            title="This isn't a generic financial plan with a hockey stick on the cover."
+            eyebrow="The Career Architecture"
+            title="A living document for your financial life during and after hockey."
           />
           <div className="mt-8 space-y-4 text-neutral-dark/70 leading-relaxed text-left max-w-2xl mx-auto">
             <p>
-              Every service is built from the ground up for the specific
-              financial complexity professional hockey players face. The jock
-              tax isn&apos;t an add-on — it&apos;s a core competency.
-              Cross-border planning isn&apos;t a referral to a Canadian
-              accountant — it&apos;s integrated into every decision we make.
+              We call the way we work <strong>The Career Architecture</strong> —
+              the framework we use to structure your financial life around your
+              career window, not despite it. It&apos;s the plan that captures the
+              vision of the future you lay out for me and translates it into the
+              decisions that get you there.
             </p>
             <p>
-              And all of it is included in one flat fee. No AUM percentage. No
-              commissions. No incentive to do anything other than what&apos;s
-              right for you and your family.
+              The Career Architecture is a living document. Every financial
+              decision you make from here forward gets routed through it. Change
+              the inputs — a trade, a new contract, a baby, a business — and the
+              plan adjusts. The point is to make sure your family is taken care
+              of and that any change to your finances still supports the life
+              you&apos;re building.
+            </p>
+            <p>
+              The jock tax isn&apos;t an add-on — it&apos;s a core piece of the
+              Architecture. Cross-border planning isn&apos;t a referral to a
+              Canadian accountant — it&apos;s integrated into every decision we
+              make. All of it included in one flat fee. No AUM percentage. No
+              commissions.
             </p>
           </div>
         </div>
