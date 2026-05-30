@@ -131,8 +131,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Fix 2: The Lineup — team-framework section */}
-      <section className="bg-neutral-bg py-10 sm:py-14">
+      {/* Fix 2: The Lineup — team-framework section (ice band for arctic feel) */}
+      <section className="bg-ice py-10 sm:py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SectionHeading
             eyebrow="The Lineup"
@@ -246,10 +246,10 @@ export default function HomePage() {
             {tiers.map((tier) => (
               <div
                 key={tier.name}
-                className={`rounded-xl p-6 sm:p-8 border ${
+                className={`rounded-xl p-6 sm:p-8 border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
                   tier.featured
-                    ? "border-secondary bg-primary text-white ring-2 ring-secondary"
-                    : "border-neutral-bg bg-neutral-bg"
+                    ? "border-secondary bg-primary text-white ring-2 ring-secondary shadow-md"
+                    : "border-neutral-bg bg-neutral-bg hover:bg-white"
                 }`}
               >
                 {tier.featured && (
@@ -480,7 +480,7 @@ export default function HomePage() {
                 <p className="text-xs text-steel uppercase tracking-wider">
                   Tax Saved (Year 1)
                 </p>
-                <p className="text-xl font-bold text-secondary mt-1">$34K</p>
+                <p className="text-xl font-bold text-accent-red mt-1">$34K</p>
               </div>
               <div className="bg-neutral-bg rounded-lg p-4">
                 <p className="text-xs text-steel uppercase tracking-wider">
@@ -529,15 +529,14 @@ export default function HomePage() {
             ].map((pub) => (
               <div
                 key={pub.name}
-                className="h-12 flex items-center justify-center px-2 opacity-70 hover:opacity-100 transition-opacity"
+                className="h-14 flex items-center justify-center px-2 transition-transform hover:scale-105"
               >
                 <Image
                   src={pub.logo}
                   alt={pub.name}
-                  width={160}
-                  height={48}
-                  className="max-h-12 max-w-full w-auto object-contain"
-                  style={{ filter: "grayscale(1) contrast(0.9)", mixBlendMode: "luminosity" }}
+                  width={180}
+                  height={56}
+                  className="max-h-14 max-w-full w-auto object-contain"
                 />
               </div>
             ))}
@@ -598,8 +597,9 @@ export default function HomePage() {
 
       {/* Fix 10: Agent-specific section — softened CTA to inline link
           (was big primary button stacked above CTASection's Opening Faceoff;
-          two heavy CTAs in a row created visual collision per Josh review) */}
-      <section className="bg-white py-10 sm:py-14 border-t-2 border-secondary/20">
+          two heavy CTAs in a row created visual collision per Josh review)
+          + gold-tinted band for visual variety (was bg-white) */}
+      <section className="relative py-10 sm:py-14 overflow-hidden bg-gradient-to-br from-secondary/8 via-white to-ice/40 border-t-2 border-secondary/20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-secondary font-semibold text-sm uppercase tracking-wider mb-2">
             For Agents
