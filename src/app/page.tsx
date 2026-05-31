@@ -70,11 +70,6 @@ const partnerTools = [
 export default function HomePage() {
   return (
     <>
-      {/* DEPLOY-DIAGNOSTIC-BANNER — temporary marker to verify deployment freshness.
-          Remove after Josh confirms he sees this. */}
-      <div className="bg-accent-red text-white text-center py-2 text-sm font-mono">
-        DEPLOY MARKER · {process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 8) || "local"} · 2026-05-30 PM
-      </div>
       {/* Hero — atmospheric hockey imagery background */}
       <section className="relative bg-primary py-8 sm:py-10 lg:py-12 overflow-hidden">
         {/* Hero image: Taylor Friehl via Unsplash (free license, no attribution required). */}
