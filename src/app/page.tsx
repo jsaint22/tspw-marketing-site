@@ -56,14 +56,14 @@ const tiers = [
 ];
 
 const partnerTools = [
-  { name: "Altruist", desc: "Custody & cross-border capability", domain: "altruist.com" },
-  { name: "RightCapital", desc: "Financial planning software", domain: "rightcapital.com" },
-  { name: "Monarch Money", desc: "Budgeting & net worth tracking", domain: "monarchmoney.com" },
-  { name: "Sequence", desc: "Cash flow mapping", domain: "sequence.io" },
+  { name: "Altruist", desc: "Custody & cross-border capability", accent: "#1B7BBD" },
+  { name: "RightCapital", desc: "Financial planning software", accent: "#0F6F4F" },
+  { name: "Monarch Money", desc: "Budgeting & net worth tracking", accent: "#3D5A47" },
+  { name: "Sequence", desc: "Cash flow mapping", accent: "#222222" },
   {
     name: "Cross-Border CPA Specialists",
     desc: "Partner network of CPAs with NHL/AHL experience",
-    domain: null,
+    accent: "#C9A84C",
   },
 ];
 
@@ -446,29 +446,17 @@ export default function HomePage() {
             {partnerTools.map((tool, index) => (
               <RevealOnScroll key={tool.name} delay={index * 0.06} className="h-full">
               <div
-                className="h-full bg-white rounded-xl p-5 text-center border border-neutral-bg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-start gap-3"
+                className="h-full bg-white rounded-xl p-5 text-center border border-neutral-bg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col items-center justify-start gap-3 relative overflow-hidden"
+                style={{ borderTopColor: tool.accent, borderTopWidth: "3px" }}
               >
-                {tool.domain ? (
-                  // Logo via Clearbit's logo CDN. <img> instead of next/image to avoid
-                  // remote-pattern whitelist. (No onError handler — Server Component
-                  // can't pass event handlers. If Clearbit 404s, browser shows native
-                  // broken-image icon briefly; alt text + name + desc still readable.)
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={`https://logo.clearbit.com/${tool.domain}`}
-                    alt={tool.name}
-                    className="h-8 w-auto object-contain"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                )}
-                <p className="font-bold text-primary text-sm">{tool.name}</p>
-                <p className="text-xs text-steel">{tool.desc}</p>
+                <div
+                  className="h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-white text-lg"
+                  style={{ backgroundColor: tool.accent }}
+                >
+                  {tool.name.charAt(0)}
+                </div>
+                <p className="font-bold text-primary text-sm leading-tight">{tool.name}</p>
+                <p className="text-xs text-steel leading-relaxed">{tool.desc}</p>
               </div>
               </RevealOnScroll>
             ))}
@@ -544,7 +532,7 @@ export default function HomePage() {
       <section className="bg-white py-10 sm:py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading eyebrow="Featured In" title="Trusted expertise." />
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-10 items-center">
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 items-center">
             {[
               { name: "Forbes", logo: "/press/Forbes.png" },
               { name: "MarketWatch", logo: "/press/marketwatch.png" },
@@ -553,14 +541,18 @@ export default function HomePage() {
             ].map((pub) => (
               <div
                 key={pub.name}
-                className="h-20 flex items-center justify-center px-4 transition-transform hover:scale-105"
+                className="h-24 w-full flex items-center justify-center px-2 transition-transform hover:scale-105"
               >
-                <Image
+                {/* Native img instead of next/image so the aspect ratio fills the
+                    box uniformly via object-contain (Next/Image's intrinsic-size
+                    behavior was causing MarketWatch to render smaller than
+                    Forbes/BiggerPockets, and BP to crop on the left edge) */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={pub.logo}
                   alt={pub.name}
-                  width={240}
-                  height={80}
-                  className="max-h-20 max-w-full w-auto object-contain"
+                  className="max-h-20 max-w-full object-contain"
+                  loading="lazy"
                 />
               </div>
             ))}
