@@ -530,21 +530,37 @@ export default function HomePage() {
 
       {/* Fix 9: Social proof — press & credentials */}
       <section className="bg-white py-10 sm:py-14">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading eyebrow="Featured In" title="Trusted expertise." />
-          {/* Text-based press credits — bulletproof against logo source-file
-              cropping issues (BP, Advisorpedia stacked layout, Forbes black
-              background all caused uniform-height treatment to break). Editorial
-              typography reads as "As seen in" + publication names in clean
-              caps with separator dots. */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-base sm:text-lg font-display text-neutral-dark/70">
-            <span className="font-semibold tracking-wide">Forbes</span>
-            <span className="text-secondary text-sm" aria-hidden="true">●</span>
-            <span className="font-semibold tracking-wide">MarketWatch</span>
-            <span className="text-secondary text-sm" aria-hidden="true">●</span>
-            <span className="font-semibold tracking-wide">Advisorpedia</span>
-            <span className="text-secondary text-sm" aria-hidden="true">●</span>
-            <span className="font-semibold tracking-wide">BiggerPockets</span>
+          {/* Press logos using clean source PNGs copied from WIY (commit 19e9ff1
+              replaced the corrupt TSPW source files). All 4 at uniform display
+              height 40px with aspect-preserving widths.
+              Aspect ratios + render widths at h=40:
+              - Forbes 800x208 (3.85:1) → 154px wide
+              - MarketWatch 617x108 (5.71:1) → 229px wide
+              - Advisorpedia 315x159 (1.98:1) → 79px wide (stacked, slightly taller display)
+              - BiggerPockets 250x148 (1.69:1) → 68px wide */}
+          <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 items-center justify-items-center">
+            {[
+              { name: "Forbes", logo: "/press/Forbes.png", height: 40 },
+              { name: "MarketWatch", logo: "/press/marketwatch.png", height: 36 },
+              // Advisorpedia is stacked (icon-over-text); needs more height
+              { name: "Advisorpedia", logo: "/press/Advisorpedia Logo.png", height: 56 },
+              { name: "BiggerPockets", logo: "/press/BiggerPockets.png", height: 52 },
+            ].map((pub) => (
+              <div
+                key={pub.name}
+                className="h-20 flex items-center justify-center transition-transform hover:scale-105 w-full"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={pub.logo}
+                  alt={pub.name}
+                  style={{ height: `${pub.height}px`, width: "auto", objectFit: "contain" }}
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
           <p className="mt-4 text-xs text-steel italic text-center">
             Press coverage includes general advisory work. TSPW-specific press
