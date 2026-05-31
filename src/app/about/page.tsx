@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
+import { EditorialPullQuote } from "@/components/cinematic/EditorialPullQuote";
 
 export const metadata: Metadata = {
   title: "About Josh",
@@ -242,11 +243,10 @@ export default function AboutPage() {
               Same philosophy, different audience. Both built on the belief that
               financial planning should start with your life, not your money.
             </p>
-            <p>
-              I&apos;m living the life I help clients design. That&apos;s not a
-              marketing line — it&apos;s proof of concept.
-            </p>
           </div>
+          <EditorialPullQuote attribution="— Josh St. Laurent">
+            I&apos;m living the life I help clients design. That&apos;s not a marketing line — it&apos;s proof of concept.
+          </EditorialPullQuote>
         </div>
       </section>
 
