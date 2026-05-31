@@ -31,7 +31,10 @@ import {
 type Step = 0 | 1 | 2 | 3 | 4;
 
 const STEPS: { title: string; description: string }[] = [
-  // VOICE-LOCK: step titles + descriptions — Window 6 fills.
+  // VOICE-LOCK: step titles + descriptions — Window 6.5 (2026-05-30) DEFERRED.
+  // No direct Batch 1 canon backing for step labels; current placeholders are neutral
+  // (non-anti-pattern, low-pressure framing on Goals step matches DNA #10). Step titles
+  // left untouched per voice-library-phase-1 deferred batches; flag for Phase 3/5 follow-up.
   { title: "Identity", description: "Who you are and how to reach you." },
   { title: "Hockey context", description: "Your career stage and situation." },
   { title: "Financial picture", description: "What's in place today." },
@@ -194,11 +197,13 @@ export default function IntakeForm() {
   if (submitState.kind === "success") {
     return (
       <div className="bg-white rounded-2xl shadow-sm p-8 sm:p-10 text-center">
-        {/* VOICE-LOCK: TSPW intake success state copy — Window 6 fills.
+        {/* Voice attested 2026-05-30 (Window 6.5): EXTRAPOLATION from DNA #10 low-pressure
+            presence + Batch 1 trade-day "I'm doing some prep over here" competence-without-
+            performance signal. First-person Josh voice (matches welcome email surface).
             Substantiation: confirm receipt only; no outcome promises. */}
-        <h2 className="text-2xl font-bold text-primary mb-3">Got it.</h2>
+        <h2 className="text-2xl font-bold text-primary mb-3">Got it &mdash; thanks for that.</h2>
         <p className="text-neutral-dark/70 max-w-xl mx-auto">
-          Your intake is in. Josh will review and follow up personally with next steps —
+          I&rsquo;ll review what you sent and follow up personally with next steps &mdash;
           usually within one business day.
         </p>
         <p className="text-sm text-neutral-dark/50 mt-6">
@@ -382,7 +387,10 @@ export default function IntakeForm() {
       {/* Step 4: Goals */}
       {step === 4 && (
         <div className="space-y-4">
-          {/* VOICE-LOCK: TSPW intake goals-section labels — Window 6 voice attestation pending.
+          {/* Voice attested 2026-05-30 (Window 6.5): goals-section labels APPROVED AS-IS.
+              "After hockey" framing is canon Pattern 5 (Phase 1 cross-batch DNA observation
+              #5 — explicit during/after timeline frame). "What's a question no advisor has
+              answered for you yet?" matches DNA #10 low-pressure listener-first posture.
               Substantiation: open-ended capture only; no claim or projection. */}
           <FieldShell
             label="What does financial success look like after hockey?"
@@ -492,13 +500,14 @@ export default function IntakeForm() {
 
       {submitState.kind === "error" && (
         <p className="text-sm text-rose-600 text-center" role="alert">
-          {/* VOICE-LOCK: TSPW intake error-retry copy — Window 6 voice attestation pending.
-              Substantiation: friendly retry only; no error detail leak. */}
-          Something went wrong submitting your intake. Please try again, or email{" "}
+          {/* Voice attested 2026-05-30 (Window 6.5): EXTRAPOLATION from DNA #10 low-pressure
+              presence ("I'm here if you need me" pattern). First-person Josh voice + softer
+              failure framing. Substantiation: friendly retry only; no error detail leak. */}
+          Something didn&rsquo;t go through. Please try again, or email me directly at{" "}
           <a href="mailto:josh@topshelfprivatewealth.com" className="underline">
             josh@topshelfprivatewealth.com
-          </a>{" "}
-          directly.
+          </a>
+          .
         </p>
       )}
     </form>

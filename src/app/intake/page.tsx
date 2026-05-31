@@ -16,16 +16,18 @@ export default function IntakePage() {
           <p className="text-secondary font-semibold text-xs uppercase tracking-wider mb-3">
             Player Intake
           </p>
-          {/* VOICE-LOCK: TSPW intake form headline — Window 6 voice attestation pending.
-              Banned register: financial-jargon. Tone match: /contact page headline. */}
+          {/* VOICE-LOCK: TSPW intake form headline — Window 6.5 (2026-05-30) DEFERRED.
+              No direct Batch 1 canon backing for headline copy; current placeholder is
+              non-anti-pattern (sophisticated, direct, no jargon-stack). Flagged for
+              Phase 3/5 follow-up per voice-library-phase-1-2026-05-28.md deferred batches. */}
           <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
             Tell us about your situation.
           </h1>
-          {/* VOICE-LOCK: TSPW intake form subhead — Window 6 voice attestation pending.
-              Substantiation: factual process description only; no outcome promises. */}
+          {/* Voice attested 2026-05-30 (Window 6.5): EXTRAPOLATION from DNA #1 collaborative
+              pronouns + Opening Faceoff frame. Substantiation: process description only. */}
           <p className="mt-4 text-base sm:text-lg text-white/70 max-w-2xl mx-auto">
-            This stays between us. Your answers help us prepare for the conversation —
-            and decide together whether we&apos;re the right fit.
+            This stays between us. Your answers help us prepare for the Opening Faceoff &mdash;
+            and decide together whether this is a fit.
           </p>
         </div>
       </header>
