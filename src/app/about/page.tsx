@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
+import { EditorialPullQuote } from "@/components/cinematic/EditorialPullQuote";
 
 export const metadata: Metadata = {
   title: "About Josh",
   description:
-    "Joshua St. Laurent, CFP, CFT, APFC — the hockey-native financial planner who left Fidelity to build something better for professional hockey players.",
+    "Joshua St. Laurent, CFP, CFT, APFC — the hockey-native financial planner who left the brokerage world to build something better for professional hockey players.",
 };
 
 export default function AboutPage() {
@@ -84,16 +85,16 @@ export default function AboutPage() {
 
           <div className="mt-10">
             <SectionHeading
-              eyebrow="The Fidelity Story"
+              eyebrow="Why I Left"
               title="I watched advisors take off their fiduciary hat and put on their sales hat in the same conversation."
               centered={false}
             />
             <div className="mt-6 space-y-5 text-neutral-dark/80 leading-relaxed">
               <p>
-                At Fidelity, I was stuck in a system built to serve the firm, not
-                the client. Too many clients, impossible to go deep with any of
-                them. Constant pressure to sell products clients didn&apos;t need,
-                from a manager who had never sat across from a client in his life.
+                At my last firm, I was stuck in a system built to serve the firm,
+                not the client. Too many clients, impossible to go deep with any
+                of them. Constant pressure to sell products clients didn&apos;t
+                need, from managers who had never sat across from a client.
               </p>
               <p>
                 The clearest signal that the system was broken? Advisors legally
@@ -102,8 +103,8 @@ export default function AboutPage() {
                 That&apos;s the problem.
               </p>
               <p>
-                I left to build something that actually worked for the people on
-                the other side of the table.
+                Frankly, this is why I launched Top Shelf — to actually work for
+                the people on the other side of the table.
               </p>
             </div>
           </div>
@@ -144,8 +145,8 @@ export default function AboutPage() {
             <p>
               Hockey players face a financial reality unlike almost anyone else.
               You have 10 to 15 years to earn what most people earn over 40. The
-              jock tax alone costs players thousands every year — and most
-              accountants don&apos;t know it exists. Cross-border complexity between
+              jock tax alone is something most players overpay on without
+              realizing it — and most accountants don&apos;t know it exists. Cross-border complexity between
               the US and Canada creates situations most financial advisors have
               never seen.
             </p>
@@ -176,7 +177,7 @@ export default function AboutPage() {
               {
                 abbr: "CFP\u00AE",
                 name: "Certified Financial Planner",
-                desc: "The gold standard in comprehensive financial planning.",
+                desc: "The fiduciary standard for financial planning in the US.",
               },
               {
                 abbr: "CFT\u2122",
@@ -242,11 +243,10 @@ export default function AboutPage() {
               Same philosophy, different audience. Both built on the belief that
               financial planning should start with your life, not your money.
             </p>
-            <p>
-              I&apos;m living the life I help clients design. That&apos;s not a
-              marketing line — it&apos;s proof of concept.
-            </p>
           </div>
+          <EditorialPullQuote attribution="— Josh St. Laurent">
+            I&apos;m living the life I help clients design. That&apos;s not a marketing line — it&apos;s proof of concept.
+          </EditorialPullQuote>
         </div>
       </section>
 

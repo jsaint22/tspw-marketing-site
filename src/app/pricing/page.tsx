@@ -16,7 +16,7 @@ const tiers = [
     name: "Call-Up",
     subtitle: "For players getting their shot. Build the foundation right.",
     range: "Total career earnings under $500K",
-    price: "~$12,500",
+    price: "~$15,000",
     period: "/year",
     description:
       "For players early in their career who need a financial foundation built right from the start.",
@@ -56,8 +56,8 @@ const tiers = [
     subtitle:
       "For players whose legacy extends beyond the ice. Full family office coordination.",
     range: "Total career earnings $10M+",
-    price: "Bespoke",
-    period: "",
+    price: "Starting at $75,000",
+    period: "/year",
     description:
       "For top-earning players and their families who need full family office coordination and legacy planning.",
     features: [

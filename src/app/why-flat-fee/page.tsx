@@ -62,7 +62,7 @@ export default function WhyFlatFeePage() {
                   career: "$2M career earnings",
                   saved: "$800K saved",
                   aum: "~$8,000/year in AUM fees",
-                  flat: "~$12,500/year flat fee",
+                  flat: "~$15,000/year flat fee",
                   note: "At this level, our fee is higher — but you're getting comprehensive planning most AUM advisors won't provide for an $800K account.",
                 },
                 {
@@ -76,8 +76,8 @@ export default function WhyFlatFeePage() {
                   career: "$30M career earnings",
                   saved: "$12M saved",
                   aum: "~$120,000/year in AUM fees",
-                  flat: "Bespoke (still dramatically less)",
-                  note: "At this level, the AUM advisor is charging $120K for the same work they do for someone with $4M. The math speaks for itself.",
+                  flat: "Starting at $75,000 (still dramatically less)",
+                  note: "At this level, the AUM model charges $120K — the flat-fee approach is structurally different.",
                 },
               ].map((item) => (
                 <div

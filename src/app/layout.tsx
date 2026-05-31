@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import { LenisProvider } from "@/components/cinematic/LenisProvider";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -16,12 +20,21 @@ const inter = Inter({
   display: "swap",
 });
 
+const isStaging = process.env.NEXT_PUBLIC_ENVIRONMENT !== "production";
+
 export const metadata: Metadata = {
-  title: "Top Shelf Private Wealth",
+  title: {
+    default: "Top Shelf Private Wealth — Built Exclusively for Professional Hockey Players",
+    template: "%s | Top Shelf Private Wealth",
+  },
   description:
-    "Top Shelf Private Wealth is a financial planning practice for professional hockey players. Public availability returns later in 2026.",
-  metadataBase: new URL("https://topshelfprivatewealth.com"),
-  robots: { index: false, follow: false },
+    "The flat-fee fiduciary advisory firm built exclusively for professional hockey players. Jock tax strategy, cross-border planning, and compressed-window financial planning.",
+  metadataBase: new URL(
+    isStaging
+      ? "https://tspw-marketing-site.vercel.app"
+      : "https://topshelfprivatewealth.com"
+  ),
+  robots: isStaging ? { index: false, follow: false } : { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -37,10 +50,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${inter.variable} h-full`}
+      className={`${playfair.variable} ${inter.variable}`}
     >
-      <body className="min-h-full flex flex-col antialiased">
-        <main className="flex-1">{children}</main>
+      <body className="min-h-screen flex flex-col antialiased">
+        <LenisProvider>
+          <ScrollToTop />
+          <Navigation />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </LenisProvider>
         <GoogleAnalytics gaId="G-EFHP5DPH6G" />
       </body>
     </html>

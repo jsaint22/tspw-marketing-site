@@ -21,8 +21,8 @@ export default function ContactPage() {
             Book your Opening Faceoff.
           </h1>
           <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
-            30 minutes. No pitch. No pressure. Just a conversation about your
-            situation and whether we&apos;re the right fit.
+            These opening faceoff calls are low pressure. I do a lot of listening
+            to understand where I can best help. 30 minutes. No pitch.
           </p>
         </div>
       </section>
