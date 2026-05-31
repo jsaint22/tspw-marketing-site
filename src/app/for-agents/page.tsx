@@ -35,25 +35,26 @@ export default function ForAgentsPage() {
       <section className="bg-white py-10 sm:py-14">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="The Problem You See"
-            title="Your players are getting bad financial advice. You know it."
+            eyebrow="How We Think About This"
+            title="This is the start of a great partnership."
             centered={false}
           />
           <div className="mt-6 space-y-5 text-neutral-dark/80 leading-relaxed">
             <p>
-              You&apos;ve watched players hand their money to commission-based
-              advisors who sell products instead of building plans. You&apos;ve seen
-              the results — players who earned millions and ended up with nothing.
+              Your agent looks out for your player&apos;s best interest when it
+              comes to the contract and negotiations with the team and the
+              league. We look out for your player and their family&apos;s finances
+              and keep their best interest at heart in that domain.
             </p>
             <p>
-              You can&apos;t be the financial advisor. That&apos;s not your role.
-              But you can make sure the person managing their money is actually
-              working for them — not for a commission check.
+              Together, our job is to make sure that after hockey your player can
+              do whatever they set their mind to, and that they and their family
+              are always taken care of.
             </p>
             <p>
               Top Shelf Private Wealth is a flat-fee fiduciary. No AUM. No
-              commissions. No conflicts. Just comprehensive financial planning
-              built for the specific complexity your players face.
+              commissions. No conflicts. Planning built for the specific
+              complexity your players face — during and after hockey.
             </p>
           </div>
         </div>
@@ -204,7 +205,7 @@ export default function ForAgentsPage() {
           />
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              "Your players get institutional-quality financial planning",
+              "Your players get the planning depth their careers actually require",
               "You have a direct line to a fiduciary for financial questions",
               "No referral fees — zero conflicts between us",
               "Co-branded resources that add value to your client relationships",

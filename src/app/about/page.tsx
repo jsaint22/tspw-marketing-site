@@ -102,8 +102,8 @@ export default function AboutPage() {
                 That&apos;s the problem.
               </p>
               <p>
-                I left to build something that actually worked for the people on
-                the other side of the table.
+                Frankly, this is why I launched Top Shelf — to actually work for
+                the people on the other side of the table.
               </p>
             </div>
           </div>
@@ -176,7 +176,7 @@ export default function AboutPage() {
               {
                 abbr: "CFP\u00AE",
                 name: "Certified Financial Planner",
-                desc: "The gold standard in comprehensive financial planning.",
+                desc: "The fiduciary standard for financial planning in the US.",
               },
               {
                 abbr: "CFT\u2122",
