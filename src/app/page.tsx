@@ -541,18 +541,18 @@ export default function HomePage() {
             ].map((pub) => (
               <div
                 key={pub.name}
-                className="h-16 flex items-center justify-center transition-transform hover:scale-105"
+                style={{ height: "64px" }}
+                className="flex items-center justify-center transition-transform hover:scale-105 w-full"
               >
-                {/* Fixed height h-14 (56px) — width auto. Forces ALL logos to
-                    render at the SAME visual height regardless of native size.
-                    Without this, short logos (MarketWatch) showed at native 40px
-                    while tall logos (Forbes) hit max-h-20 (80px), making them
-                    look unequal. h-14 with w-auto = uniform visual weight. */}
+                {/* Inline style for height — bypasses any CSS specificity issue.
+                    All 4 press logos render at exactly 48px tall regardless of
+                    native aspect ratio. Tailwind's h-14 class was not taking
+                    effect for unknown reasons on the live deployment. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={pub.logo}
                   alt={pub.name}
-                  className="h-14 w-auto"
+                  style={{ height: "48px", width: "auto", maxWidth: "100%", objectFit: "contain" }}
                   loading="lazy"
                 />
               </div>
