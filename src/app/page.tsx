@@ -530,43 +530,21 @@ export default function HomePage() {
 
       {/* Fix 9: Social proof — press & credentials */}
       <section className="bg-white py-10 sm:py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading eyebrow="Featured In" title="Trusted expertise." />
-          <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 items-center justify-items-center">
-            {[
-              // Forbes source PNG is white-text-on-BLACK-background. invert(1)
-              // flips to black-on-transparent so it matches visual weight of others.
-              { name: "Forbes", logo: "/press/Forbes.png", filter: "invert(1)", height: 40 },
-              { name: "MarketWatch", logo: "/press/marketwatch.png", filter: undefined, height: 32 },
-              // Advisorpedia is STACKED (icon over text). Need MORE height for it
-              // to feel proportionate to wordmark logos. 56px lets the stacked
-              // layout render with both icon + text legible.
-              { name: "Advisorpedia", logo: "/press/Advisorpedia Logo.jpeg", filter: undefined, height: 56 },
-              { name: "BiggerPockets", logo: "/press/BiggerPockets.png", filter: undefined, height: 32 },
-            ].map((pub) => (
-              <div
-                key={pub.name}
-                className="h-20 flex items-center justify-center transition-transform hover:scale-105 w-full"
-              >
-                {/* Per-logo height. Stacked layouts (Advisorpedia) get more
-                    pixels; wide wordmarks get less. Visual balance > strict
-                    pixel uniformity. grid-cols-2 on smaller screens prevents
-                    horizontal cell-width starvation. */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={pub.logo}
-                  alt={pub.name}
-                  style={{
-                    height: `${pub.height}px`,
-                    width: "auto",
-                    maxWidth: "100%",
-                    objectFit: "contain",
-                    filter: pub.filter,
-                  }}
-                  loading="lazy"
-                />
-              </div>
-            ))}
+          {/* Text-based press credits — bulletproof against logo source-file
+              cropping issues (BP, Advisorpedia stacked layout, Forbes black
+              background all caused uniform-height treatment to break). Editorial
+              typography reads as "As seen in" + publication names in clean
+              caps with separator dots. */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-base sm:text-lg font-display text-neutral-dark/70">
+            <span className="font-semibold tracking-wide">Forbes</span>
+            <span className="text-secondary text-sm" aria-hidden="true">●</span>
+            <span className="font-semibold tracking-wide">MarketWatch</span>
+            <span className="text-secondary text-sm" aria-hidden="true">●</span>
+            <span className="font-semibold tracking-wide">Advisorpedia</span>
+            <span className="text-secondary text-sm" aria-hidden="true">●</span>
+            <span className="font-semibold tracking-wide">BiggerPockets</span>
           </div>
           <p className="mt-4 text-xs text-steel italic text-center">
             Press coverage includes general advisory work. TSPW-specific press
