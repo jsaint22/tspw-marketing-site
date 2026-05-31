@@ -532,7 +532,7 @@ export default function HomePage() {
       <section className="bg-white py-10 sm:py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading eyebrow="Featured In" title="Trusted expertise." />
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 items-center">
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
             {[
               { name: "Forbes", logo: "/press/Forbes.png" },
               { name: "MarketWatch", logo: "/press/marketwatch.png" },
@@ -541,17 +541,18 @@ export default function HomePage() {
             ].map((pub) => (
               <div
                 key={pub.name}
-                className="h-24 w-full flex items-center justify-center px-2 transition-transform hover:scale-105"
+                className="h-16 flex items-center justify-center transition-transform hover:scale-105"
               >
-                {/* Native img instead of next/image so the aspect ratio fills the
-                    box uniformly via object-contain (Next/Image's intrinsic-size
-                    behavior was causing MarketWatch to render smaller than
-                    Forbes/BiggerPockets, and BP to crop on the left edge) */}
+                {/* Fixed height h-14 (56px) — width auto. Forces ALL logos to
+                    render at the SAME visual height regardless of native size.
+                    Without this, short logos (MarketWatch) showed at native 40px
+                    while tall logos (Forbes) hit max-h-20 (80px), making them
+                    look unequal. h-14 with w-auto = uniform visual weight. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={pub.logo}
                   alt={pub.name}
-                  className="max-h-20 max-w-full object-contain"
+                  className="h-14 w-auto"
                   loading="lazy"
                 />
               </div>
