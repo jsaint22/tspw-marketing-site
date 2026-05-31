@@ -30,3 +30,7 @@ export function getInngestEmitter(): Inngest {
 
 export const TSPW_INTAKE_SUBMITTED_EVENT = "tspw/intake.submitted";
 export const TSPW_INTAKE_FAILED_EVENT = "tspw/intake.failed";
+
+// Funnel-reversal canon 2026-05-30 — light capture event for cold walk-ins
+// who submit /quick-reply form (3-5 fields) instead of booking Cal.com first.
+export const TSPW_LIGHT_CAPTURE_SUBMITTED_EVENT = "tspw/light-capture.submitted";

@@ -94,7 +94,18 @@ function FieldShell({ label, error, hint, children, required }: FieldShellProps)
 const inputClass =
   "w-full rounded-md border border-neutral-dark/20 px-3 py-2 bg-white text-neutral-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary";
 
-export default function IntakeForm() {
+interface IntakeFormProps {
+  /** Pre-filled from token validation when player follows post-call intake link. */
+  prefilledFirstName?: string;
+  prefilledLastName?: string;
+  prefilledEmail?: string;
+}
+
+export default function IntakeForm({
+  prefilledFirstName,
+  prefilledLastName,
+  prefilledEmail,
+}: IntakeFormProps = {}) {
   const [step, setStep] = useState<Step>(0);
   const [submitState, setSubmitState] = useState<
     { kind: "idle" } | { kind: "submitting" } | { kind: "success"; prospectId: string } | { kind: "error" }
@@ -110,6 +121,9 @@ export default function IntakeForm() {
     resolver: zodResolver(tspwIntakeSchema),
     mode: "onTouched",
     defaultValues: {
+      first_name: prefilledFirstName,
+      last_name: prefilledLastName,
+      email: prefilledEmail,
       consent_marketing_communications: false,
       consent_data_processing: false,
       ai_opt_out: false,
