@@ -77,7 +77,7 @@ export default function WhyFlatFeePage() {
                   saved: "$12M saved",
                   aum: "~$120,000/year in AUM fees",
                   flat: "Starting at $75,000 (still dramatically less)",
-                  note: "At this level, the AUM advisor is charging $120K for the same work they do for someone with $4M. The math speaks for itself.",
+                  note: "At this level, the AUM model charges $120K — the flat-fee approach is structurally different.",
                 },
               ].map((item) => (
                 <div

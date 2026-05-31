@@ -22,7 +22,7 @@ export default function JockTaxPage() {
           <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
             Every game you play in a different state or province triggers a
             separate tax filing obligation. Most accountants don&apos;t know it
-            exists. It&apos;s costing you thousands.
+            exists. Most players overpay without realizing it.
           </p>
         </div>
       </section>
@@ -46,10 +46,11 @@ export default function JockTaxPage() {
             <p>
               For hockey players, this means filing tax returns in every state
               and province where you played a road game during the season. Most
-              NHL players file in 8 to 18 state and provincial jurisdictions per
-              season, depending on division alignment, cross-border travel, and
-              postseason play. AHL and ECHL players face similar complexity with
-              even tighter margins.
+              NHL players typically file in 8 to 18 state and provincial
+              jurisdictions per season, depending on division alignment,
+              cross-border travel, and postseason play — exact count varies
+              year-to-year and by individual player. AHL and ECHL players face
+              similar complexity with even tighter margins.
             </p>
           </div>
         </div>
@@ -130,7 +131,8 @@ export default function JockTaxPage() {
               Most CPAs have never worked with a professional athlete. They
               don&apos;t know the jock tax exists, let alone how to file it
               correctly across multiple jurisdictions. The result? Missed filings,
-              penalties, and overpayments that add up to thousands every year.
+              penalties, and overpayments players often don&apos;t see until the
+              cumulative cost lands later.
             </p>
             <p>
               Some states are aggressive about enforcement. They track your game

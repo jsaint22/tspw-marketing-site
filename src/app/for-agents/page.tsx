@@ -97,11 +97,11 @@ export default function ForAgentsPage() {
                 tier: "Tier 3",
                 name: "Embedded Partner",
                 description:
-                  "Full integration. We function as the financial arm of your player management operation — proactive, coordinated, and always in sync with your strategy.",
+                  "Full integration. We function as the financial arm of your player management operation — coordinated and always in sync with your strategy. Players engage through your introduction; we don't solicit your roster directly.",
                 features: [
                   "Everything in Tier 2",
-                  "Dedicated advisor for your entire roster",
-                  "Proactive outreach to draft picks and new signings",
+                  "Dedicated advisor capacity for your roster (engaged through your introduction)",
+                  "Coordinated planning conversations for your draft picks and new signings (introduced through you)",
                   "Annual planning summit with your team",
                   "Custom reporting on player financial health",
                 ],
