@@ -532,34 +532,34 @@ export default function HomePage() {
       <section className="bg-white py-10 sm:py-14">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading eyebrow="Featured In" title="Trusted expertise." />
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 items-center justify-items-center">
+          <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 items-center justify-items-center">
             {[
-              // Forbes source PNG is white-text-on-BLACK-background. On a white
-              // page that reads as a heavy black block. invert(1) flips it to
-              // black-on-transparent so it matches the visual weight of the
-              // other 3 logos (which are dark-text-on-transparent natively).
-              { name: "Forbes", logo: "/press/Forbes.png", filter: "invert(1)" },
-              { name: "MarketWatch", logo: "/press/marketwatch.png", filter: undefined },
-              { name: "Advisorpedia", logo: "/press/Advisorpedia Logo.jpeg", filter: undefined },
-              { name: "BiggerPockets", logo: "/press/BiggerPockets.png", filter: undefined },
+              // Forbes source PNG is white-text-on-BLACK-background. invert(1)
+              // flips to black-on-transparent so it matches visual weight of others.
+              { name: "Forbes", logo: "/press/Forbes.png", filter: "invert(1)", height: 40 },
+              { name: "MarketWatch", logo: "/press/marketwatch.png", filter: undefined, height: 32 },
+              // Advisorpedia is STACKED (icon over text). Need MORE height for it
+              // to feel proportionate to wordmark logos. 56px lets the stacked
+              // layout render with both icon + text legible.
+              { name: "Advisorpedia", logo: "/press/Advisorpedia Logo.jpeg", filter: undefined, height: 56 },
+              { name: "BiggerPockets", logo: "/press/BiggerPockets.png", filter: undefined, height: 32 },
             ].map((pub) => (
               <div
                 key={pub.name}
-                style={{ height: "56px" }}
-                className="flex items-center justify-center transition-transform hover:scale-105 w-full overflow-hidden"
+                className="h-20 flex items-center justify-center transition-transform hover:scale-105 w-full"
               >
-                {/* All 4 logos forced to 36px tall via inline style. Source PNGs
-                    are whitespace-trimmed (commit c51b559) so content fills uniformly.
-                    Container is max-w-6xl + gap-4 so each cell is ~290px wide,
-                    accommodating MarketWatch (widest aspect 6.19:1 → 223px at h=36)
-                    without forcing width-cap shrinkage. Forbes filtered to invert. */}
+                {/* Per-logo height. Stacked layouts (Advisorpedia) get more
+                    pixels; wide wordmarks get less. Visual balance > strict
+                    pixel uniformity. grid-cols-2 on smaller screens prevents
+                    horizontal cell-width starvation. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={pub.logo}
                   alt={pub.name}
                   style={{
-                    height: "36px",
+                    height: `${pub.height}px`,
                     width: "auto",
+                    maxWidth: "100%",
                     objectFit: "contain",
                     filter: pub.filter,
                   }}
