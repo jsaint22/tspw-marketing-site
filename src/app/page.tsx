@@ -534,25 +534,35 @@ export default function HomePage() {
           <SectionHeading eyebrow="Featured In" title="Trusted expertise." />
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
             {[
-              { name: "Forbes", logo: "/press/Forbes.png" },
-              { name: "MarketWatch", logo: "/press/marketwatch.png" },
-              { name: "Advisorpedia", logo: "/press/Advisorpedia Logo.jpeg" },
-              { name: "BiggerPockets", logo: "/press/BiggerPockets.png" },
+              // Forbes source PNG is white-text-on-BLACK-background. On a white
+              // page that reads as a heavy black block. invert(1) flips it to
+              // black-on-transparent so it matches the visual weight of the
+              // other 3 logos (which are dark-text-on-transparent natively).
+              { name: "Forbes", logo: "/press/Forbes.png", filter: "invert(1)" },
+              { name: "MarketWatch", logo: "/press/marketwatch.png", filter: undefined },
+              { name: "Advisorpedia", logo: "/press/Advisorpedia Logo.jpeg", filter: undefined },
+              { name: "BiggerPockets", logo: "/press/BiggerPockets.png", filter: undefined },
             ].map((pub) => (
               <div
                 key={pub.name}
                 style={{ height: "64px" }}
                 className="flex items-center justify-center transition-transform hover:scale-105 w-full"
               >
-                {/* Inline style for height — bypasses any CSS specificity issue.
-                    All 4 press logos render at exactly 48px tall regardless of
-                    native aspect ratio. Tailwind's h-14 class was not taking
-                    effect for unknown reasons on the live deployment. */}
+                {/* All 4 logos forced to 48px tall via inline style. Source PNGs
+                    are now whitespace-trimmed (commit c51b559) so the content
+                    fills the box uniformly. Forbes gets invert filter (see note
+                    above). */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={pub.logo}
                   alt={pub.name}
-                  style={{ height: "48px", width: "auto", maxWidth: "100%", objectFit: "contain" }}
+                  style={{
+                    height: "48px",
+                    width: "auto",
+                    maxWidth: "100%",
+                    objectFit: "contain",
+                    filter: pub.filter,
+                  }}
                   loading="lazy"
                 />
               </div>
