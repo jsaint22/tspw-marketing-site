@@ -542,11 +542,11 @@ export default function HomePage() {
               - BiggerPockets 250x148 (1.69:1) → 68px wide */}
           <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 items-center justify-items-center">
             {[
-              { name: "Forbes", logo: "/press/Forbes.png", height: 40 },
-              { name: "MarketWatch", logo: "/press/marketwatch.png", height: 36 },
+              { name: "Forbes", logo: "/press/Forbes-v2.png", height: 40 },
+              { name: "MarketWatch", logo: "/press/marketwatch-v2.png", height: 36 },
               // Advisorpedia is stacked (icon-over-text); needs more height
-              { name: "Advisorpedia", logo: "/press/Advisorpedia Logo.png", height: 56 },
-              { name: "BiggerPockets", logo: "/press/BiggerPockets.png", height: 52 },
+              { name: "Advisorpedia", logo: "/press/Advisorpedia-v2.png", height: 56 },
+              { name: "BiggerPockets", logo: "/press/BiggerPockets-v2.png", height: 52 },
             ].map((pub) => (
               <div
                 key={pub.name}
