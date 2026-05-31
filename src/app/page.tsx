@@ -544,13 +544,15 @@ export default function HomePage() {
             {[
               { name: "Forbes", logo: "/press/Forbes-v2.png", height: 40 },
               { name: "MarketWatch", logo: "/press/marketwatch-v2.png", height: 36 },
-              // Advisorpedia is stacked (icon-over-text); needs more height
+              // Both stacked badges — Advisorpedia + BP's official "Featured
+              // Financial Advisor" badge (same file WIY uses) — need more
+              // height to feel proportionate to wordmark logos.
               { name: "Advisorpedia", logo: "/press/Advisorpedia-v2.png", height: 56 },
-              { name: "BiggerPockets", logo: "/press/BiggerPockets-v2.png", height: 52 },
+              { name: "BiggerPockets", logo: "/press/BP_Featured-FinAd-v2.png", height: 64 },
             ].map((pub) => (
               <div
                 key={pub.name}
-                className="h-20 flex items-center justify-center transition-transform hover:scale-105 w-full"
+                className="h-24 flex items-center justify-center transition-transform hover:scale-105 w-full"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
