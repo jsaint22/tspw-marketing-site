@@ -530,9 +530,9 @@ export default function HomePage() {
 
       {/* Fix 9: Social proof — press & credentials */}
       <section className="bg-white py-10 sm:py-14">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading eyebrow="Featured In" title="Trusted expertise." />
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 items-center justify-items-center">
             {[
               // Forbes source PNG is white-text-on-BLACK-background. On a white
               // page that reads as a heavy black block. invert(1) flips it to
@@ -545,21 +545,21 @@ export default function HomePage() {
             ].map((pub) => (
               <div
                 key={pub.name}
-                style={{ height: "64px" }}
-                className="flex items-center justify-center transition-transform hover:scale-105 w-full"
+                style={{ height: "56px" }}
+                className="flex items-center justify-center transition-transform hover:scale-105 w-full overflow-hidden"
               >
-                {/* All 4 logos forced to 48px tall via inline style. Source PNGs
-                    are now whitespace-trimmed (commit c51b559) so the content
-                    fills the box uniformly. Forbes gets invert filter (see note
-                    above). */}
+                {/* All 4 logos forced to 36px tall via inline style. Source PNGs
+                    are whitespace-trimmed (commit c51b559) so content fills uniformly.
+                    Container is max-w-6xl + gap-4 so each cell is ~290px wide,
+                    accommodating MarketWatch (widest aspect 6.19:1 → 223px at h=36)
+                    without forcing width-cap shrinkage. Forbes filtered to invert. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={pub.logo}
                   alt={pub.name}
                   style={{
-                    height: "48px",
+                    height: "36px",
                     width: "auto",
-                    maxWidth: "100%",
                     objectFit: "contain",
                     filter: pub.filter,
                   }}
