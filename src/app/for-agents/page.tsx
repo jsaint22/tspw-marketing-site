@@ -5,7 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 export const metadata: Metadata = {
   title: "For Agents",
   description:
-    "A partnership model for NHLPA certified agents. You protect the contract. We protect the money. Quarterly co-branded resources and direct advisor access for your players.",
+    "A partnership model for hockey agents. You protect the contract. We protect the money. Quarterly co-branded resources and direct advisor access for your players.",
 };
 
 const BOOKING_URL =
