@@ -42,7 +42,7 @@ export default function LegalPage() {
                 Our written disclosure brochure describing services, fees,
                 conflicts of interest, and disciplinary history. This filing
                 reflects the current Wealth In Yourself scope. A Top Shelf
-                Private Wealth amendment is in flight for Q2 2026.
+                Private Wealth amendment is in progress.
               </p>
               <a
                 href="/disclosures/adv-part-2a.pdf"
@@ -64,8 +64,8 @@ export default function LegalPage() {
                 Yourself LLC is currently registered with the State of Nevada
                 and is not presently subject to the Form CRS filing requirement.
                 Should the firm&apos;s registration status change with the Top
-                Shelf Private Wealth amendment in Q2 2026, Form CRS will be
-                filed with the SEC and posted here.
+                Shelf Private Wealth amendment, Form CRS will be filed with the
+                SEC and posted here.
               </p>
               <p className="mt-3 text-xs text-steel italic">
                 Last reviewed: May 28, 2026. Questions? Email{" "}

@@ -18,7 +18,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="mt-4 text-sm text-white/60">
-            Last updated: May 28, 2026
+            Last updated: July 1, 2026
           </p>
         </div>
       </section>
@@ -213,8 +213,8 @@ export default function PrivacyPage() {
           <h2>6. Third-Party Service Providers</h2>
           <p>
             We engage third-party service providers in the delivery of our
-            advisory services, including custodians (Altruist, Interactive
-            Brokers), CRM (GoHighLevel), internal workspace (Notion), cloud
+            advisory services, including custodians (Altruist), CRM
+            (GoHighLevel), internal workspace (Notion), cloud
             workspace (Google Workspace), database and authentication platform
             (Supabase), financial planning software (RightCapital), cash flow
             management (Monarch Money, Sequence), AI processing (Anthropic),
