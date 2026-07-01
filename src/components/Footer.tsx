@@ -110,6 +110,24 @@ export default function Footer() {
             to your situation.
           </p>
           <div className="mt-4 flex flex-wrap gap-4 text-xs text-white/50">
+            <Link
+              href="/legal"
+              className="hover:text-white/70 transition-colors"
+            >
+              Legal &amp; Disclosures
+            </Link>
+            <Link
+              href="/privacy"
+              className="hover:text-white/70 transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="hover:text-white/70 transition-colors"
+            >
+              Terms of Service
+            </Link>
             <a
               href="https://adviserinfo.sec.gov/firm/summary/322123"
               target="_blank"
