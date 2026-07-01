@@ -40,9 +40,9 @@ export default function LegalPage() {
               </h3>
               <p className="mt-2 text-sm text-neutral-dark/70 leading-relaxed">
                 Our written disclosure brochure describing services, fees,
-                conflicts of interest, and disciplinary history. This filing
-                reflects the current Wealth In Yourself scope. A Top Shelf
-                Private Wealth amendment is in progress.
+                conflicts of interest, and disciplinary history. This is the
+                Top Shelf Private Wealth brochure, amended and filed with the
+                State of Nevada on June 26, 2026.
               </p>
               <a
                 href="/disclosures/adv-part-2a.pdf"
@@ -63,12 +63,11 @@ export default function LegalPage() {
                 investment advisers and certain dual-registered firms. Wealth In
                 Yourself LLC is currently registered with the State of Nevada
                 and is not presently subject to the Form CRS filing requirement.
-                Should the firm&apos;s registration status change with the Top
-                Shelf Private Wealth amendment, Form CRS will be filed with the
-                SEC and posted here.
+                Should the firm&apos;s registration status change, Form CRS
+                will be filed with the SEC and posted here.
               </p>
               <p className="mt-3 text-xs text-steel italic">
-                Last reviewed: May 28, 2026. Questions? Email{" "}
+                Last reviewed: July 1, 2026. Questions? Email{" "}
                 <a
                   href="mailto:josh@topshelfprivatewealth.com"
                   className="text-primary hover:text-secondary"
