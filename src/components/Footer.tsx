@@ -34,7 +34,7 @@ export default function Footer() {
               priority
             />
             <p className="text-white/70 text-sm leading-relaxed max-w-sm">
-              The only flat-fee fiduciary advisory firm built exclusively for
+              A flat-fee fiduciary advisory firm built exclusively for
               professional hockey players. On your team, in your corner.
             </p>
             {/* Fix 15: Footer newsletter signup */}
