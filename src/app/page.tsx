@@ -43,7 +43,7 @@ const tiers = [
     subtitle:
       "For players whose legacy extends beyond the ice. Full family office coordination.",
     range: "Total career earnings $10M+",
-    price: "Starting at $75,000",
+    price: "Starting at $75,000/year",
     features: [
       "Everything in Core Four",
       "Dedicated family office coordination",
@@ -61,8 +61,8 @@ const partnerTools = [
   { name: "Monarch Money", desc: "Budgeting & net worth tracking", accent: "#3D5A47" },
   { name: "Sequence", desc: "Cash flow mapping", accent: "#222222" },
   {
-    name: "Cross-Border CPA Specialists",
-    desc: "Partner network of CPAs with NHL/AHL experience",
+    name: "Cross-Border CPA Coordination",
+    desc: "We coordinate athlete-specialist CPAs for your filing needs",
     accent: "#C9A84C",
   },
 ];
@@ -464,69 +464,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Fix 18: Case study — enhanced with team metaphor */}
-      <section className="bg-neutral-bg py-10 sm:py-14">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Case Study"
-            title="What happens when the position finally gets filled."
-          />
-          <div className="mt-8 bg-white rounded-2xl p-6 sm:p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <span className="text-primary font-bold">AHL</span>
-              </div>
-              <div>
-                <p className="font-bold text-primary">Anonymized Client</p>
-                <p className="text-sm text-steel">AHL Forward, 4-year career</p>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-              <div className="bg-neutral-bg rounded-lg p-5 hover:shadow-sm transition-shadow">
-                <p className="text-xs text-steel uppercase tracking-wider">
-                  Career Earnings
-                </p>
-                <CountUpMetric value={1.2} prefix="$" suffix="M" duration={1200} className="text-3xl font-bold text-primary mt-2 block" />
-              </div>
-              <div className="bg-neutral-bg rounded-lg p-5 hover:shadow-sm transition-shadow">
-                <p className="text-xs text-steel uppercase tracking-wider">
-                  Tax Saved (Year 1)
-                </p>
-                <CountUpMetric value={34} prefix="$" suffix="K" duration={1400} delay={150} className="text-3xl font-bold text-accent-red mt-2 block" />
-              </div>
-              <div className="bg-neutral-bg rounded-lg p-5 hover:shadow-sm transition-shadow">
-                <p className="text-xs text-steel uppercase tracking-wider">
-                  AUM Fees Avoided
-                </p>
-                <CountUpMetric value={8} prefix="$" suffix="K/yr" duration={1100} delay={300} className="text-3xl font-bold text-primary mt-2 block" />
-              </div>
-            </div>
-            <p className="text-sm text-neutral-dark/70 leading-relaxed">
-              This player came to us after two years with a commission-based
-              advisor who had never filed a jock tax return. The rest of his team
-              — his agent, his trainers, his PT staff — was world class. The
-              financial position was empty. We stepped into that role.
-              Restructured tax strategy across four states. Built proper
-              cross-border planning. Created a post-career transition plan. All
-              for a flat fee less than what the previous advisor had charged in
-              AUM alone.
-            </p>
-            <p className="mt-4 text-sm text-neutral-dark/70 leading-relaxed">
-              This isn&apos;t a rare story. It&apos;s the story of most hockey
-              players we talk to. The financial position has been chronically
-              empty. We fill it.
-            </p>
-            <p className="mt-4 text-xs text-steel italic">
-              * Case study is anonymized and presented for illustrative purposes
-              only. Individual results vary. Past results are not indicative of
-              future performance.
-            </p>
-          </div>
-          <p className="mt-4 text-center text-sm text-steel">
-            More case studies coming soon as we grow our roster.
-          </p>
-        </div>
-      </section>
+      {/* Case-study section REMOVED 2026-07-02 (compliance: no TSPW clients exist; rebuild only as a substantiated, clearly-labeled hypothetical composite after SR8 pass) */}
 
       {/* Fix 9: Social proof — press & credentials */}
       <section className="bg-white py-10 sm:py-14">

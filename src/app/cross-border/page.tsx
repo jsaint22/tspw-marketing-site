@@ -66,7 +66,7 @@ export default function CrossBorderPage() {
             {[
               {
                 title: "Treaty Provisions",
-                desc: "The US-Canada tax treaty contains specific provisions for athletes that most tax professionals have never read. Understanding Article XV and its implications for where and how your income is taxed is foundational to getting cross-border planning right.",
+                desc: "The US-Canada tax treaty contains specific provisions for athletes that most tax professionals have never read. Understanding Article XVI (Artistes and Athletes) and its implications for where and how your income is taxed is foundational to getting cross-border planning right.",
               },
               {
                 title: "RRSP vs. 401(k) Decisions",
