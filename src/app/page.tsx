@@ -464,7 +464,95 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Case-study section REMOVED 2026-07-02 (compliance: no TSPW clients exist; rebuild only as a substantiated, clearly-labeled hypothetical composite after SR8 pass) */}
+      {/* B8: Hypothetical-composite scenario (rebuilt 2026-07-05; replaces the
+          fabricated case study removed 2026-07-02). NOT a client story — zero
+          TSPW clients exist. Every number substantiated at wiy-operating-system
+          references/marketing-claims-substantiation/tspw-hypothetical-composite-ahl-forward-2026-07-05.md.
+          Changing any figure or wording here requires updating that file. */}
+      <section className="bg-neutral-bg py-10 sm:py-14">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Hypothetical Scenario"
+            title="What duty-day planning can look like on paper."
+          />
+          <div className="mt-8 bg-white rounded-2xl p-6 sm:p-8">
+            {/* Prominent hypothetical label — must stay at the TOP of the card,
+                never demoted to a footnote (NAC 90 posture) */}
+            <div className="mb-6 rounded-lg border-2 border-secondary/60 bg-secondary/10 px-4 py-3">
+              <p className="text-sm font-semibold text-primary leading-relaxed">
+                This is a hypothetical composite scenario for illustration
+                &mdash; not an actual client or an actual result. Assumptions
+                and math: available on request.
+              </p>
+            </div>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span className="text-primary font-bold">AHL</span>
+              </div>
+              <div>
+                <p className="font-bold text-primary">
+                  A Hypothetical AHL Forward
+                </p>
+                <p className="text-sm text-steel">
+                  Illustrative composite &mdash; not an actual client
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+              <div className="bg-neutral-bg rounded-lg p-5 hover:shadow-sm transition-shadow">
+                <p className="text-xs text-steel uppercase tracking-wider">
+                  Hypothetical Season Salary
+                </p>
+                <CountUpMetric value={400} prefix="$" suffix="K" duration={1200} className="text-3xl font-bold text-primary mt-2 block" />
+              </div>
+              <div className="bg-neutral-bg rounded-lg p-5 hover:shadow-sm transition-shadow">
+                <p className="text-xs text-steel uppercase tracking-wider">
+                  Modeled Year-1 State-Tax Difference
+                </p>
+                <CountUpMetric value={27} prefix="~$" suffix="K" duration={1400} delay={150} className="text-3xl font-bold text-accent-red mt-2 block" />
+              </div>
+              <div className="bg-neutral-bg rounded-lg p-5 hover:shadow-sm transition-shadow">
+                <p className="text-xs text-steel uppercase tracking-wider">
+                  U.S. Game States in the Duty-Day Model
+                </p>
+                <CountUpMetric value={4} duration={1100} delay={300} className="text-3xl font-bold text-primary mt-2 block" />
+              </div>
+            </div>
+            <p className="text-sm text-neutral-dark/70 leading-relaxed">
+              Picture a veteran AHL forward on a $400,000 one-way contract,
+              playing for a Nevada-based club in the Pacific Division. Staying a
+              California resident &mdash; where the offseason home is &mdash;
+              would put his state income tax near $33,500 for the season.
+              Establishing a bona fide Nevada domicile changes the math: Nevada
+              has no income tax, and each game state can only tax the share of
+              salary earned on duty days spent there. Across a 72-game
+              schedule, the modeled duty-day taxes in California, Colorado, and
+              Arizona total roughly $6,200 &mdash; a modeled difference of
+              about $27,000 in year one. That gap is exactly what duty-day
+              planning exists to catch.
+            </p>
+            <p className="mt-4 text-sm text-neutral-dark/70 leading-relaxed">
+              On fees: 1% of a $600,000 portfolio is $6,000 in year one, and
+              that dollar figure rises with every dollar the portfolio grows
+              &mdash; typically for investment management alone. A flat fee is
+              fixed, disclosed before you sign, and covers the whole job: tax
+              strategy, duty-day coordination, cross-border planning, and the
+              transition after hockey. Neither structure is free. The
+              difference is what&apos;s included and how the cost scales.
+            </p>
+            <p className="mt-4 text-xs text-steel italic">
+              Assumptions: single filer, standard deduction, no other income,
+              2025 published state tax rates (California nonresident duty-day
+              method; Colorado 4.4%; Arizona 2.5%), estimated duty-day counts
+              from the Pacific Division schedule structure, Canadian road games
+              excluded, and a residency change that is genuine &mdash; not
+              paperwork. Full math and sources are documented and available on
+              request. This illustration is not tax advice, and no outcome is
+              guaranteed or implied.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Fix 9: Social proof — press & credentials */}
       <section className="bg-white py-10 sm:py-14">
