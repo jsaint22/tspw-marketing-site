@@ -6,7 +6,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 const BOOKING_URL =
-  "https://links.topshelfprivatewealth.com/widget/bookings/opening-faceoff";
+  "https://cal.com/jsaint/tspw-opening-faceoff";
 
 const navLinks = [
   { href: "/about", label: "About" },

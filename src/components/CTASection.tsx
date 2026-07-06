@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const BOOKING_URL =
-  "https://links.topshelfprivatewealth.com/widget/bookings/opening-faceoff";
+  "https://cal.com/jsaint/tspw-opening-faceoff";
 
 interface CTASectionProps {
   headline?: string;

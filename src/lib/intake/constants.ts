@@ -10,4 +10,4 @@
 // =============================================================================
 
 export const TSPW_OPENING_FACEOFF_BOOKING_URL =
-  "https://links.topshelfprivatewealth.com/widget/bookings/opening-faceoff";
+  "https://cal.com/jsaint/tspw-opening-faceoff";

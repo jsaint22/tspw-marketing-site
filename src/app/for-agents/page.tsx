@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const BOOKING_URL =
-  "https://links.topshelfprivatewealth.com/widget/bookings/opening-faceoff";
+  "https://cal.com/jsaint/tspw-agent-intro";
 
 export default function ForAgentsPage() {
   return (

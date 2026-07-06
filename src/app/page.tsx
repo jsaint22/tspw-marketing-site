@@ -6,7 +6,7 @@ import { RevealOnScroll } from "@/components/cinematic/RevealOnScroll";
 import { CountUpMetric } from "@/components/cinematic/CountUpMetric";
 
 const BOOKING_URL =
-  "https://links.topshelfprivatewealth.com/widget/bookings/opening-faceoff";
+  "https://cal.com/jsaint/tspw-opening-faceoff";
 
 const tiers = [
   {
