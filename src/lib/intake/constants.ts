@@ -11,3 +11,10 @@
 
 export const TSPW_OPENING_FACEOFF_BOOKING_URL =
   "https://cal.com/jsaint/tspw-opening-faceoff";
+
+// Header the intake form uses to forward the post-call access token (the
+// same `?t=` value the /intake page itself was gated on) to
+// POST /api/intake/submit, so the write path can be validated server-side
+// too — not just the page render. See src/lib/intake/access-token.ts and
+// src/app/api/intake/submit/route.ts.
+export const INTAKE_ACCESS_TOKEN_HEADER = "x-tspw-intake-token";

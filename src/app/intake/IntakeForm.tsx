@@ -27,6 +27,7 @@ import {
   CONTRACT_TYPES,
   CURRENT_ADVISOR_INTENTS,
 } from "@/lib/intake/schema";
+import { INTAKE_ACCESS_TOKEN_HEADER } from "@/lib/intake/constants";
 
 type Step = 0 | 1 | 2 | 3 | 4;
 
@@ -99,12 +100,21 @@ interface IntakeFormProps {
   prefilledFirstName?: string;
   prefilledLastName?: string;
   prefilledEmail?: string;
+  /**
+   * The same `?t=` post-call access token the /intake page itself was
+   * gated on. Forwarded on submit so the write path (POST /api/intake/submit)
+   * can be validated server-side too, not just the page render. Without
+   * this, submit is only defended by zod + rate limit — a direct POST
+   * with no token would otherwise succeed.
+   */
+  accessToken?: string;
 }
 
 export default function IntakeForm({
   prefilledFirstName,
   prefilledLastName,
   prefilledEmail,
+  accessToken,
 }: IntakeFormProps = {}) {
   const [step, setStep] = useState<Step>(0);
   const [submitState, setSubmitState] = useState<
@@ -190,7 +200,10 @@ export default function IntakeForm({
     try {
       const res = await fetch("/api/intake/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          ...(accessToken ? { [INTAKE_ACCESS_TOKEN_HEADER]: accessToken } : {}),
+        },
         body: JSON.stringify(values),
       });
       if (!res.ok) {

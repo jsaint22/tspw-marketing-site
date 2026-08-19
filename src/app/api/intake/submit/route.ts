@@ -5,16 +5,24 @@
 // Per references/tspw-intake-build-spec-2026-05-30.md §"/api/intake/submit":
 //   1. Validate against zod schema (reject 400 on invalid)
 //   2. Upstash rate-limit 5/IP/hr (reject 429 on limit hit)
-//   3. Insert into client_data.tspw_prospects via service-role client
-//   4. Fire Inngest event tspw/intake.submitted with prospect_id
-//   5. Return { ok: true, prospect_id } — DO NOT leak any other detail
-//   6. On any error: fire tspw/intake.failed with redacted error context
+//   3. Access-token gate — same post-call token the /intake page itself is
+//      gated on (see src/lib/intake/access-token.ts), forwarded via the
+//      `x-tspw-intake-token` header (reject 401 on missing/invalid/expired/
+//      wrong-status)
+//   4. Insert into client_data.tspw_prospects via service-role client
+//   5. Fire Inngest event tspw/intake.submitted with prospect_id
+//   6. Return { ok: true, prospect_id } — DO NOT leak any other detail
+//   7. On any error: fire tspw/intake.failed with redacted error context
 //
-// Security:
+// Security (hardened 2026-07-08 — compliance consult flagged that the VIEW
+// was token-gated but this WRITE path was not; a direct POST with no token
+// could previously submit, defended only by zod + rate limit):
 //   - SUPABASE_SECRET_KEY bypasses RLS server-side; client never sees it
 //   - Inbound POST body NEVER re-emitted on the event bus (only prospect_id)
 //   - Error response never echoes user input; always generic friendly retry
 //   - IP + UA captured for audit row; not surfaced in client response
+//   - Access token is the primary authorization gate for this write path;
+//     zod + rate limit remain as defense-in-depth, not the sole defense
 //
 // Compliance:
 //   - Consent enforced at zod layer (both must be true)
@@ -28,6 +36,8 @@ import { ZodError } from "zod";
 import { tspwIntakeSchema } from "@/lib/intake/schema";
 import { getIntakeSupabaseClient } from "@/lib/intake/supabase";
 import { checkIntakeRateLimit } from "@/lib/intake/ratelimit";
+import { validateIntakeAccessToken } from "@/lib/intake/access-token";
+import { INTAKE_ACCESS_TOKEN_HEADER } from "@/lib/intake/constants";
 import {
   getInngestEmitter,
   TSPW_INTAKE_SUBMITTED_EVENT,
@@ -58,7 +68,7 @@ async function emitFailure(args: {
   errorMessage: string;
   firstName: string | null;
   email: string | undefined;
-  stage: "validation" | "rate_limit" | "supabase_insert" | "inngest_emit" | "unknown";
+  stage: "validation" | "rate_limit" | "auth" | "supabase_insert" | "inngest_emit" | "unknown";
 }) {
   try {
     const inngest = getInngestEmitter();
@@ -141,7 +151,59 @@ export async function POST(req: NextRequest) {
   }
 
   // -------------------------------------------------------------------------
-  // 4. Insert into client_data.tspw_prospects
+  // 4. Access-token gate
+  // -------------------------------------------------------------------------
+  // The /intake VIEW is token-gated (src/app/intake/page.tsx →
+  // validateIntakeAccessToken), but this WRITE path must be gated too — a
+  // direct POST with no token, or with the same zod-valid body but no/bad
+  // token, must never reach the insert below. The legitimate form always
+  // has the token (it's in the page URL) and forwards it via the
+  // x-tspw-intake-token header — see IntakeForm.tsx.
+  const accessToken = req.headers.get(INTAKE_ACCESS_TOKEN_HEADER);
+  if (!accessToken) {
+    await emitFailure({
+      errorClass: "MissingAccessToken",
+      errorMessage: "Request had no x-tspw-intake-token header",
+      firstName: parsed.first_name,
+      email: parsed.email,
+      stage: "auth",
+    });
+    return NextResponse.json({ ok: false }, { status: 401 });
+  }
+
+  // Fail CLOSED: any error validating the token (e.g. a Supabase outage) is
+  // treated as a rejected submission, not an unhandled 500 that skips the
+  // auth gate. This differs deliberately from the rate limiter above, which
+  // fails open on outage — that's anti-abuse, this is the authorization gate.
+  let tokenResult: Awaited<ReturnType<typeof validateIntakeAccessToken>>;
+  try {
+    tokenResult = await validateIntakeAccessToken(accessToken);
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
+    console.error("[tspw-intake] access-token validation threw", msg);
+    await emitFailure({
+      errorClass: "AccessTokenValidationError",
+      errorMessage: msg,
+      firstName: parsed.first_name,
+      email: parsed.email,
+      stage: "auth",
+    });
+    return NextResponse.json({ ok: false }, { status: 401 });
+  }
+
+  if (!tokenResult.valid) {
+    await emitFailure({
+      errorClass: "InvalidAccessToken",
+      errorMessage: `Token rejected: ${tokenResult.reason}`,
+      firstName: parsed.first_name,
+      email: parsed.email,
+      stage: "auth",
+    });
+    return NextResponse.json({ ok: false }, { status: 401 });
+  }
+
+  // -------------------------------------------------------------------------
+  // 5. Insert into client_data.tspw_prospects
   // -------------------------------------------------------------------------
   let prospectId: string;
   try {
@@ -180,7 +242,7 @@ export async function POST(req: NextRequest) {
   }
 
   // -------------------------------------------------------------------------
-  // 5. Fire Inngest event tspw/intake.submitted
+  // 6. Fire Inngest event tspw/intake.submitted
   // -------------------------------------------------------------------------
   try {
     const inngest = getInngestEmitter();
@@ -209,7 +271,7 @@ export async function POST(req: NextRequest) {
   }
 
   // -------------------------------------------------------------------------
-  // 6. Success
+  // 7. Success
   // -------------------------------------------------------------------------
   return NextResponse.json({ ok: true, prospect_id: prospectId });
 }

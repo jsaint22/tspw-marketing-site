@@ -59,6 +59,7 @@ export default async function IntakePage({ searchParams }: IntakePageProps) {
             prefilledFirstName={tokenResult.prospect.first_name}
             prefilledLastName={tokenResult.prospect.last_name}
             prefilledEmail={tokenResult.prospect.email}
+            accessToken={token}
           />
         </div>
       </section>
