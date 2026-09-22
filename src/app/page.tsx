@@ -92,10 +92,8 @@ export default function HomePage() {
                 Flat-Fee Fiduciary Advisory for Hockey Players
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Your career is shorter than you think.{" "}
-                <span className="text-secondary">
-                  Your window to act is now.
-                </span>
+                The decisions that outlast hockey{" "}
+                <span className="text-secondary">get made during it.</span>
               </h1>
               <p className="mt-5 text-lg text-white/85 leading-relaxed max-w-xl">
                 Every elite hockey player has a team off the ice. We&apos;re the
