@@ -400,7 +400,7 @@ export default function HomePage() {
               </h3>
               <p className="text-sm text-steel mb-4">
                 CFP&reg; &middot; CFT&trade; &middot; APFC&reg; &middot; ACC
-                &middot; MS Financial Life Planning
+                &middot; MS Advanced Financial Planning
               </p>
               <ul className="space-y-3 text-sm text-neutral-dark/70">
                 <li className="flex items-start gap-2">
@@ -602,7 +602,7 @@ export default function HomePage() {
               <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">CFT&trade;</span>
               <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">APFC&reg;</span>
               <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">ACC</span>
-              <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">MS Financial Life Planning</span>
+              <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">MS Advanced Financial Planning</span>
               <span className="px-3 py-1.5 bg-neutral-bg rounded-full font-medium">Fee-Only Fiduciary</span>
             </div>
           </div>

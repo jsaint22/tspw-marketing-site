@@ -23,7 +23,7 @@ export default function AboutPage() {
             A rink in the front yard. A fiduciary duty to the players who need one.
           </h1>
           <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
-            Joshua St. Laurent &mdash; CFP&reg;, CFT&trade;, APFC&reg;, ACC, MS Financial Life Planning. Enrolled Agent in progress.
+            Joshua St. Laurent &mdash; CFP&reg;, CFT&trade;, APFC&reg;, ACC, MS Advanced Financial Planning. Enrolled Agent in progress.
           </p>
         </div>
       </section>
@@ -196,7 +196,7 @@ export default function AboutPage() {
               },
               {
                 abbr: "MS",
-                name: "MS Financial Life Planning",
+                name: "MS, Advanced Financial Planning (concentration in Financial Life Planning)",
                 desc: "Golden Gate University. Where the human side of money lives.",
               },
               {
