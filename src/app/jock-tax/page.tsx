@@ -141,9 +141,9 @@ export default function JockTaxPage() {
             <p>
               A CPA who does excellent work for business owners may simply
               never have had a client whose income has to be split across twenty
-              jurisdictions, because almost nobody&apos;s does. It is not a
+              jurisdictions, because hardly anybody&apos;s does. It&apos;s not a
               knowledge gap so much as a caseload gap — and what falls through it
-              is missed filings, penalties and overpayments that often do not
+              is missed filings, penalties and overpayments that often don&apos;t
               surface until years later.
             </p>
             <p>

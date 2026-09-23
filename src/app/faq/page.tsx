@@ -52,7 +52,7 @@ const faqCategories = [
     questions: [
       {
         q: "What is jock tax?",
-        a: "Playing a game in another state or province can create a tax obligation there — but not always. Five NHL states have no income tax at all (Florida, Texas, Tennessee, Nevada, Washington), and Washington, D.C. cannot tax visiting players. A typical NHL season creates a filing nexus in roughly 20 jurisdictions — about 13 states, 5 cities with their own income tax, and Canada per season, depending on division alignment, cross-border travel, and postseason play. Exact count varies year-to-year and by individual player. It's called the \"jock tax,\" and it is easy to get wrong because almost no other kind of client has income that has to be split this many ways.",
+        a: "Playing a game in another state or province can create a tax obligation there — but not always. Five NHL states have no income tax at all (Florida, Texas, Tennessee, Nevada, Washington), and Washington, D.C. cannot tax visiting players. A typical NHL season creates a filing nexus in roughly 20 jurisdictions — about 13 states, 5 cities with their own income tax, and Canada per season, depending on division alignment, cross-border travel, and postseason play. Exact count varies year-to-year and by individual player. It's called the \"jock tax,\" and it's easy to get wrong because hardly any other kind of client has income that has to be split this many ways.",
       },
       {
         q: "How does cross-border US-Canada planning work?",

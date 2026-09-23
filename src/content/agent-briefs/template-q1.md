@@ -59,7 +59,7 @@ results to report and will not imply otherwise.*
 
 1. **Residency.** The offseason state taxes the whole salary. This is the largest single lever and the one most within the player's control — but it requires a genuine move, not a change of address, and high-tax states audit departures closely.
 2. **Credits.** A resident state generally credits tax paid to another state. Returns prepared in isolation, in the wrong order, by different preparers, is where those credits go unclaimed — and the result is the same dollar taxed twice.
-3. **Duty-day inputs.** Duty days are the US standard and there is no alternative method to elect — the Ohio Supreme Court removed the games-played option in *Hillenmeyer v. Cleveland* (2015). What remains is arithmetic: counts built from the schedule, camp, travel and rehab days. A count that is wrong in a jurisdiction's favour is a bill that was never owed.
+3. **Duty-day inputs.** Duty days are the US standard and there is no alternative method to elect — the Ohio Supreme Court removed the games-played option in *Hillenmeyer v. Cleveland* (2015). What remains is arithmetic: counts built from the schedule, camp, travel and rehab days. A count that is wrong in a jurisdiction's favor is a bill that was never owed.
 
 **What it is worth** depends on the contract, the residency and the schedule, and any firm that quotes you a number before seeing all three is guessing.
 

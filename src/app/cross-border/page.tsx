@@ -23,10 +23,10 @@ export default function CrossBorderPage() {
             US-Canada cross-border tax complexity is one of the most expensive
             problems hockey players face — and one of the least understood by
             the financial industry. We plan for US-resident players who earn
-            income on both sides of the border. If you are a Canadian tax
+            income on both sides of the border. If you&apos;re a Canadian tax
             resident, say so on the first call: the advice relationship works
-            differently across the border and we will tell you plainly what we
-            can and cannot do for you before you engage.
+            differently across the border, and we&apos;ll tell you plainly what
+            we can and can&apos;t do for you before you engage.
           </p>
         </div>
       </section>
@@ -123,7 +123,7 @@ export default function CrossBorderPage() {
           />
           <div className="mt-6 space-y-5 text-neutral-dark/80 leading-relaxed">
             <p>
-              Almost everyone in this situation needs a cross-border tax
+              Just about everyone in this situation needs a cross-border tax
               specialist to prepare the returns, and so do you. The question is
               who holds the strategy the returns are built on. Handing that off
               with the paperwork is where plans come apart.
@@ -131,8 +131,8 @@ export default function CrossBorderPage() {
             <p>
               We hold it. The cross-border question sits inside every decision
               we make with you — investment account selection, retirement
-              contributions, insurance structure, estate planning, cash flow. It
-              is not a separate workstream we bolt on at tax time.
+              contributions, insurance structure, estate planning, cash flow.
+              It&apos;s not a separate workstream we bolt on at tax time.
             </p>
             <p>
               We coordinate with cross-border tax specialists, but we drive the

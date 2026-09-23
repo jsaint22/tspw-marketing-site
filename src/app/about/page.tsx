@@ -146,7 +146,7 @@ export default function AboutPage() {
               Hockey players face a financial reality unlike almost anyone else.
               You have eight to twelve years to earn what most people earn over 40.
               The jock tax splits that income across roughly twenty jurisdictions,
-              which is a problem almost no other kind of client has, so almost no
+              which is a problem hardly any other kind of client has, so hardly any
               accountant has had to solve it before. Cross-border complexity
               between the US and Canada creates situations most financial advisors
               have never seen.
