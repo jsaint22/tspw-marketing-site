@@ -41,9 +41,9 @@ export default function JockTaxPage() {
               One of the biggest levers you have financially is managing all the
               taxes you have to pay. Jock tax is the term we use for all the
               different state tax returns you&apos;re required to file as a
-              hockey player. If we can get creative and offset some or all of
-              those taxes, it could mean a substantial amount back in your
-              pocket.
+              hockey player. Where those taxes can legitimately be reduced or
+              credited, that money stays with you — how much depends entirely on
+              your residency, your contract and your schedule.
             </p>
             <p>
               If you play a game in California, California wants a piece of the
@@ -173,7 +173,7 @@ export default function JockTaxPage() {
               "Track every game and duty day across all jurisdictions",
               "File in every required state and province",
               "Coordinate foreign tax credits and cross-state offsets so the same dollar is not taxed twice",
-              "Evaluate residency strategies to minimize total tax burden",
+              "Evaluate residency strategies and what each one would actually require",
               "Coordinate with your CPA for a unified tax strategy",
               "Proactive planning for schedule changes and trades",
             ].map((item) => (

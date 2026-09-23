@@ -137,10 +137,11 @@ export default function ServicesPage() {
             </p>
             <p>
               The jock tax isn&apos;t an add-on — it&apos;s a core piece of the
-              Architecture. Cross-border planning isn&apos;t a referral to a
-              Canadian accountant — it&apos;s integrated into every decision we
-              make. All of it included in one flat fee. No AUM percentage. No
-              commissions.
+              Architecture. Cross-border planning is coordinated here rather
+              than handed off: we hold the strategy, the residency decisions and
+              the duty-day picture, and we work alongside a cross-border tax
+              specialist who prepares the filings. Planning included in one flat
+              fee. No AUM percentage. No commissions.
             </p>
           </div>
         </div>

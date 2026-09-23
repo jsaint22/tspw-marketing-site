@@ -22,7 +22,11 @@ export default function CrossBorderPage() {
           <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
             US-Canada cross-border tax complexity is one of the most expensive
             problems hockey players face — and one of the least understood by
-            the financial industry.
+            the financial industry. We plan for US-resident players who earn
+            income on both sides of the border. If you are a Canadian tax
+            resident, say so on the first call: the advice relationship works
+            differently across the border and we will tell you plainly what we
+            can and cannot do for you before you engage.
           </p>
         </div>
       </section>
@@ -70,7 +74,7 @@ export default function CrossBorderPage() {
               },
               {
                 title: "RRSP vs. 401(k) Decisions",
-                desc: "Canadian players in the US face decisions about retirement account contributions that have long-term tax implications. Contributing to the wrong account — or missing treaty-eligible contributions — has long-term consequences over a career.",
+                desc: "A player earning in both countries faces decisions about which retirement accounts to use, and the treaty treats them differently. Contributing to the wrong account — or missing treaty-eligible contributions — has long-term consequences over a career.",
               },
               {
                 title: "Foreign Tax Credits",
