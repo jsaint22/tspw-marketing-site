@@ -20,9 +20,10 @@ export default function JockTaxPage() {
             The jock tax is the most expensive thing nobody talks to you about.
           </h1>
           <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
-            Every game you play in a different state or province triggers a
-            separate tax filing obligation. Most accountants don&apos;t know it
-            exists. Most players overpay without realizing it.
+            Most road games create a tax filing obligation &mdash; though not in
+            Florida, Texas, Tennessee, Nevada or Washington, which have no state
+            income tax. Most accountants don&apos;t know the rules exist. Most
+            players overpay without realizing it.
           </p>
         </div>
       </section>
