@@ -47,13 +47,17 @@ export default function JockTaxPage() {
             <p>
               If you play a game in California, California wants a piece of the
               income you earned that day — even if you live in Nevada, Florida,
-              or Alberta. For hockey players, this means filing tax returns in
-              every state and province where you played a road game during the
-              season. Most NHL players typically file in 8 to 18 state and
-              provincial jurisdictions per season, depending on division
-              alignment, cross-border travel, and postseason play — exact count
-              varies year-to-year and by individual player. AHL and ECHL players
-              face similar complexity with even tighter margins.
+              or Alberta. Not every road game does this: five NHL states have no
+              income tax at all — Florida, Texas, Tennessee, Nevada and
+              Washington — and Washington, D.C. cannot tax visiting players. But
+              a handful of cities tax you on top of the state, including
+              Cleveland, Philadelphia, Detroit, Columbus and St. Louis. Most NHL
+              players end up with a filing nexus in roughly 19 to 25
+              jurisdictions per season — about 13 states, 5 cities and Canada —
+              depending on division alignment, cross-border travel and
+              postseason play. The exact count varies year to year and by
+              player. AHL and ECHL players face similar complexity with even
+              tighter margins.
             </p>
           </div>
         </div>

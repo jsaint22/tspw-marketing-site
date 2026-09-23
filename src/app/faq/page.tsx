@@ -52,7 +52,7 @@ const faqCategories = [
     questions: [
       {
         q: "What is jock tax?",
-        a: "Every game you play in a different state or province triggers a separate tax obligation in that jurisdiction. Most NHL players file tax returns in 8-18 state and provincial jurisdictions per season, depending on division alignment, cross-border travel, and postseason play. Exact count varies year-to-year and by individual player. It's called the \"jock tax\" and it's the most expensive financial reality in professional hockey that most accountants have never heard of.",
+        a: "Playing a game in another state or province can create a tax obligation there — but not always. Five NHL states have no income tax at all (Florida, Texas, Tennessee, Nevada, Washington), and Washington, D.C. cannot tax visiting players. A typical NHL season creates a filing nexus in roughly 20 jurisdictions — about 13 states, 5 cities with their own income tax, and Canada per season, depending on division alignment, cross-border travel, and postseason play. Exact count varies year-to-year and by individual player. It's called the \"jock tax\" and it's the most expensive financial reality in professional hockey that most accountants have never heard of.",
       },
       {
         q: "How does cross-border US-Canada planning work?",
@@ -60,7 +60,7 @@ const faqCategories = [
       },
       {
         q: "What states do I need to file in?",
-        a: "Every state where you play a game and that state has an income tax. Most NHL players file in 8-18 state and provincial jurisdictions per season, depending on division alignment, cross-border travel, and postseason play — plus your home state, plus federal. Exact count varies year-to-year and by individual player. We track every game, every jurisdiction, and coordinate the whole thing.",
+        a: "Every state where you play a game and that state has an income tax. Most NHL players have a filing nexus in roughly 19 to 25 jurisdictions per season &mdash; about 13 states, 5 cities with their own income tax, and Canada, depending on division alignment, cross-border travel, and postseason play — plus your home state, plus federal. Exact count varies year-to-year and by individual player. We track every game, every jurisdiction, and coordinate the whole thing.",
       },
       {
         q: "How do signing bonuses get taxed?",
