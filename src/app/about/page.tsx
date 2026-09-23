@@ -144,11 +144,12 @@ export default function AboutPage() {
           <div className="mt-6 space-y-5 text-neutral-dark/80 leading-relaxed">
             <p>
               Hockey players face a financial reality unlike almost anyone else.
-              You have eight to twelve years to earn what most people earn over 40. The
-              jock tax alone is something most players overpay on without
-              realizing it — and most accountants don&apos;t know it exists. Cross-border complexity between
-              the US and Canada creates situations most financial advisors have
-              never seen.
+              You have eight to twelve years to earn what most people earn over 40.
+              The jock tax splits that income across roughly twenty jurisdictions,
+              which is a problem almost no other kind of client has, so almost no
+              accountant has had to solve it before. Cross-border complexity
+              between the US and Canada creates situations most financial advisors
+              have never seen.
             </p>
             <p>
               And the advisors who do work with athletes? Most of them charge AUM
