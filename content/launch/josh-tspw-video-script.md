@@ -22,7 +22,7 @@ I'm Josh St. Laurent. I'm a CFP, a financial therapist, and a hockey lifer from 
 
 TSPW is the financial specialist position on your team. Flat fee. Fiduciary. Built exclusively for hockey players. Jock tax. Cross-border planning. Post-career transitions. All of it. One fee. No percentage of your money. No conflicts.
 
-Your career is shorter than you think. Your window to act is now.
+The decisions that outlast hockey get made during it.
 
 Book an Opening Faceoff call. Thirty minutes. No pitch. Just a conversation.
 
