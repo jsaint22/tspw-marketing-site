@@ -60,7 +60,7 @@ const faqCategories = [
       },
       {
         q: "What states do I need to file in?",
-        a: "Every state where you play a game and that state has an income tax. Most NHL players have a filing nexus in roughly 19 to 25 jurisdictions per season &mdash; about 13 states, 5 cities with their own income tax, and Canada, depending on division alignment, cross-border travel, and postseason play — plus your home state, plus federal. Exact count varies year-to-year and by individual player. We track every game, every jurisdiction, and coordinate the whole thing.",
+        a: "Every state where you play a game and that state has an income tax. Most NHL players have a filing nexus in roughly 19 to 25 jurisdictions per season — about 13 states, 5 cities with their own income tax, and Canada, depending on division alignment, cross-border travel, and postseason play — plus your home state, plus federal. Exact count varies year-to-year and by individual player. We track every game, every jurisdiction, and coordinate the whole thing.",
       },
       {
         q: "How do signing bonuses get taxed?",

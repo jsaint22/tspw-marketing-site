@@ -51,7 +51,7 @@ export default function JockTaxPage() {
               income tax at all — Florida, Texas, Tennessee, Nevada and
               Washington — and Washington, D.C. cannot tax visiting players. But
               a handful of cities tax you on top of the state, including
-              Cleveland, Philadelphia, Detroit, Columbus and St. Louis. Most NHL
+              Philadelphia, Pittsburgh, Detroit, Columbus and St. Louis. Most NHL
               players end up with a filing nexus in roughly 19 to 25
               jurisdictions per season — about 13 states, 5 cities and Canada —
               depending on division alignment, cross-border travel and
