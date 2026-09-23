@@ -22,7 +22,7 @@
 
 ## CBA Financial Implications — Current Season
 
-**Escrow update:** The current escrow withholding rate is approximately [X]% of player salaries under the current CBA revenue-sharing mechanism. Based on league revenue projections, the expected escrow return for this season is [X]%, which would result in players receiving back approximately [X]% of their withheld amount by [projected date].
+**Escrow update:** The escrow withholding rate is set under the CBA and changes between seasons. *Fill from the current NHLPA/CBA figure for the quarter — do not carry forward last quarter's number, and do not publish this brief with the placeholder unfilled.* Based on league revenue projections, the expected escrow return for this season is [X]%, which would result in players receiving back approximately [X]% of their withheld amount by [projected date].
 
 **What this means for cash flow:** Players should not plan spending or investment decisions around escrow returns until the actual return is confirmed. Budgeting based on post-escrow salary — not gross contract value — is the baseline.
 
@@ -48,17 +48,22 @@
 
 ---
 
-## Anonymized Case Study
+## Worked Illustration
 
-**Situation:** A mid-career player earning $3.5 million per year had been filing taxes through a generalist CPA for four seasons. The player was a resident of a high-income-tax state during the offseason and had never coordinated multi-state tax credits across road-game jurisdictions.
+*This is a constructed example, not a client. Top Shelf Private Wealth has no client
+results to report and will not imply otherwise.*
 
-**What we found:** The player was effectively double-taxed in three states due to improperly claimed or unclaimed tax credits. Additionally, the player's offseason residency in a high-tax state was costing approximately $350,000 per year in state income taxes that could have been legally avoided through residency in a no-income-tax state where the player already owned property.
+**The setup.** A mid-career player earning several million a year, filing through a generalist CPA, resident in a high-income-tax state during the offseason, with no coordination between the state returns.
 
-**What changed:** Working with a specialized tax team, the player established defensible residency in the no-tax state, implemented proper multi-state credit coordination, and restructured the duty-day allocation methodology in two states that permitted an alternative calculation.
+**Where the money goes missing, in order of size:**
 
-**Result:** The player's annual tax burden decreased by approximately $420,000 per year. Over the remaining five years of the player's career, this represented over $2 million in additional retained wealth — redirected into a diversified investment portfolio designed for the player's post-career financial runway.
+1. **Residency.** The offseason state taxes the whole salary. This is the largest single lever and the one most within the player's control — but it requires a genuine move, not a change of address, and high-tax states audit departures closely.
+2. **Credits.** A resident state generally credits tax paid to another state. Returns prepared in isolation, in the wrong order, by different preparers, is where those credits go unclaimed — and the result is the same dollar taxed twice.
+3. **Duty-day inputs.** Duty days are the US standard and there is no alternative method to elect — the Ohio Supreme Court removed the games-played option in *Hillenmeyer v. Cleveland* (2015). What remains is arithmetic: counts built from the schedule, camp, travel and rehab days. A count that is wrong in a jurisdiction's favour is a bill that was never owed.
 
-**The takeaway:** The money was always there. Nobody was looking for it.
+**What it is worth** depends on the contract, the residency and the schedule, and any firm that quotes you a number before seeing all three is guessing.
+
+
 
 *This case study is anonymized and represents a composite scenario based on common planning situations. Individual results vary. No specific tax savings are guaranteed.*
 

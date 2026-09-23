@@ -12,7 +12,7 @@ const services = [
   {
     title: "Compressed Earning Window Planning",
     description:
-      "You have 10 to 15 years to earn what most people earn over 40. Every financial decision carries more weight. We build a plan that respects that math — front-loading savings strategies, optimizing your peak earning years, and creating durability that lasts decades beyond your last game.",
+      "You have eight to twelve years to earn what most people earn over 40. Every financial decision carries more weight. We build a plan that respects that math — front-loading savings strategies, optimizing your peak earning years, and creating durability that lasts decades beyond your last game.",
     icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   {
@@ -24,7 +24,7 @@ const services = [
   {
     title: "Jock Tax Strategy",
     description:
-      "Every game you play in a different state or province triggers a separate tax obligation. Most accountants don't know this exists. We track every game, every jurisdiction, and build a strategy that minimizes what you owe across all of them.",
+      "Most road games create a tax obligation — though not in Florida, Texas, Tennessee, Nevada or Washington, which have no state income tax. Most accountants don't know this exists. We track every game, every jurisdiction, and build a strategy so the same dollar is not taxed twice and nothing is filed late.",
     icon: "M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z",
   },
   {
@@ -137,10 +137,11 @@ export default function ServicesPage() {
             </p>
             <p>
               The jock tax isn&apos;t an add-on — it&apos;s a core piece of the
-              Architecture. Cross-border planning isn&apos;t a referral to a
-              Canadian accountant — it&apos;s integrated into every decision we
-              make. All of it included in one flat fee. No AUM percentage. No
-              commissions.
+              Architecture. Cross-border planning is coordinated here rather
+              than handed off: we hold the strategy, the residency decisions and
+              the duty-day picture, and we work alongside a cross-border tax
+              specialist who prepares the filings. Planning included in one flat
+              fee. No AUM percentage. No commissions.
             </p>
           </div>
         </div>

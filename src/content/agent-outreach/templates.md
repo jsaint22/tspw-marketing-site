@@ -42,7 +42,7 @@ topshelfprivatewealth.com
 
 I sent a note a couple of weeks ago introducing myself and Top Shelf Private Wealth. I know your inbox is busy, so I'll keep this short.
 
-I put together a quarterly financial planning brief specifically for hockey players — covers current jock tax changes, off-season planning checklist, and one anonymized case study showing what proper multi-state tax coordination actually saves a player.
+I put together a quarterly financial planning brief specifically for hockey players — covers current jock tax changes, an off-season planning checklist, and one worked illustration showing what proper multi-state tax coordination actually saves a player.
 
 Happy to send it over if you'd find it useful. No strings. If it helps your players, it helps me build credibility in the hockey world. That's the whole play.
 
@@ -94,7 +94,7 @@ Appreciate you making time for the call today. A few things I took away:
 
 As promised, I'm sending over the quarterly financial planning brief we discussed. You'll have it by [day]. Feel free to share it with any of your players — it's designed to be useful without being a sales piece.
 
-I'm also mailing you a copy of *The Hockey Player's Money Playbook* — should arrive within the week. It covers the jock tax, compressed earning window, and post-career planning topics we talked about. If any of your players could benefit from it, I'm happy to send additional copies.
+I'm also sending the first-contract playbook we put together for players — a short guide to the jock tax, the compressed earning window and what gets decided before a contract is signed. It covers the jock tax, compressed earning window, and post-career planning topics we talked about. If any of your players could benefit from it, I'm happy to send additional copies.
 
 Next step from my end: I'll send the first quarterly brief at the start of next quarter. No ask. Just value.
 
@@ -119,7 +119,7 @@ Attached is the Q[X] 2026 financial planning brief from Top Shelf Private Wealth
 - **Jock tax update:** [One-sentence summary of the key development this quarter]
 - **CBA financial note:** [One-sentence summary of relevant CBA provision]
 - **Off-season checklist:** Residency confirmation, insurance review, and investment strategy adjustments your players should be thinking about
-- **Case study:** An anonymized look at how proper multi-state tax coordination saved a player over $400,000 in a single season
+- **Worked example:** How multi-state coordination actually runs across a season — the duty-day map, where credits get missed, and what gets decided before a contract is signed. *(Illustrative mechanics, not a client outcome — TSPW has no client results to report and will not imply otherwise.)*
 
 Feel free to forward this to any of your players who'd find it useful. I designed it to make you look good — you're providing financial education your players won't get from their current advisor.
 

@@ -59,18 +59,18 @@ export default function WhyFlatFeePage() {
             <div className="mt-6 space-y-4">
               {[
                 {
-                  career: "$2M career earnings",
-                  saved: "$800K saved",
-                  aum: "~$8,000/year in AUM fees",
-                  flat: "~$15,000/year flat fee",
-                  note: "At this level, our fee is higher — but you're getting comprehensive planning most AUM advisors won't provide for an $800K account.",
+                  career: "$400K career earnings",
+                  saved: "$160K saved",
+                  aum: "~$1,600/year in AUM fees",
+                  flat: "~$15,000/year flat fee (Call-Up)",
+                  note: "At this level our fee is higher in dollar terms — and it buys comprehensive planning that no AUM advisor provides on a $160K account. This is the tier where the flat fee costs you more and is still the right call.",
                 },
                 {
-                  career: "$10M career earnings",
-                  saved: "$4M saved",
-                  aum: "~$40,000/year in AUM fees",
-                  flat: "~$35,000/year flat fee",
-                  note: "The crossover point. Same work, same services — but the AUM advisor charges more because your portfolio grew. We don't.",
+                  career: "$8M career earnings",
+                  saved: "$3.2M saved",
+                  aum: "~$32,000/year in AUM fees",
+                  flat: "~$35,000/year flat fee (Core Four)",
+                  note: "Roughly the crossover. Same work, same services — but an AUM fee keeps climbing as the portfolio grows and a flat fee does not.",
                 },
                 {
                   career: "$30M career earnings",
@@ -115,9 +115,12 @@ export default function WhyFlatFeePage() {
               ))}
             </div>
             <p className="mt-4 text-xs text-steel italic">
-              * Assumes 40% savings rate and 1% AUM fee. Actual fees vary by
-              advisor. These examples are for illustrative purposes only and do
-              not represent guaranteed savings. Consult a qualified financial
+              * Illustrative only. Assumes a 40% savings rate on career earnings
+              and a 1% AUM fee, and ignores tax — a real player&apos;s investable
+              balance is lower than these figures once federal, state and
+              jock tax are paid, so treat the AUM column as a ceiling. Tier
+              names and prices follow our pricing page. Actual advisor fees
+              vary. Nothing here is a guaranteed saving. Consult a qualified financial
               advisor for advice specific to your situation.
             </p>
           </div>

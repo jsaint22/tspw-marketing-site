@@ -20,9 +20,10 @@ export default function JockTaxPage() {
             The jock tax is the most expensive thing nobody talks to you about.
           </h1>
           <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
-            Every game you play in a different state or province triggers a
-            separate tax filing obligation. Most accountants don&apos;t know it
-            exists. Most players overpay without realizing it.
+            Most road games create a tax filing obligation &mdash; though not in
+            Florida, Texas, Tennessee, Nevada or Washington, which have no state
+            income tax. Most accountants don&apos;t know the rules exist. Most
+            players overpay without realizing it.
           </p>
         </div>
       </section>
@@ -40,20 +41,24 @@ export default function JockTaxPage() {
               One of the biggest levers you have financially is managing all the
               taxes you have to pay. Jock tax is the term we use for all the
               different state tax returns you&apos;re required to file as a
-              hockey player. If we can get creative and offset some or all of
-              those taxes, it could mean a substantial amount back in your
-              pocket.
+              hockey player. Where those taxes can legitimately be reduced or
+              credited, that money stays with you — how much depends entirely on
+              your residency, your contract and your schedule.
             </p>
             <p>
               If you play a game in California, California wants a piece of the
               income you earned that day — even if you live in Nevada, Florida,
-              or Alberta. For hockey players, this means filing tax returns in
-              every state and province where you played a road game during the
-              season. Most NHL players typically file in 8 to 18 state and
-              provincial jurisdictions per season, depending on division
-              alignment, cross-border travel, and postseason play — exact count
-              varies year-to-year and by individual player. AHL and ECHL players
-              face similar complexity with even tighter margins.
+              or Alberta. Not every road game does this: five NHL states have no
+              income tax at all — Florida, Texas, Tennessee, Nevada and
+              Washington — and Washington, D.C. cannot tax visiting players. But
+              a handful of cities tax you on top of the state, including
+              Philadelphia, Pittsburgh, Detroit, Columbus and St. Louis. Most NHL
+              players end up with a filing nexus in roughly 19 to 25
+              jurisdictions per season — about 13 states, 5 cities and Canada —
+              depending on division alignment, cross-border travel and
+              postseason play. The exact count varies year to year and by
+              player. AHL and ECHL players face similar complexity with even
+              tighter margins.
             </p>
           </div>
         </div>
@@ -75,11 +80,14 @@ export default function JockTaxPage() {
               state gets a share based on the number of duty days you spent there.
             </p>
             <p>
-              But the details are where it gets complicated. Different states use
-              different allocation methods. Some count game days only. Some count
-              all duty days. Some use a &ldquo;games played&rdquo; ratio. And
-              some have de minimis thresholds that exempt athletes who earn below
-              a certain amount.
+              But the details are where it gets complicated. Duty days are the
+              United States standard, and the main alternative is gone &mdash; the
+              Ohio Supreme Court struck down Cleveland&apos;s games-played method
+              in <em>Hillenmeyer v. Cleveland</em> (2015). What still varies is
+              what counts as a duty day, and how each state treats filing
+              thresholds. Those thresholds generally govern whether a return is
+              required, not whether the income is taxable, and a player with
+              substantial total income usually files regardless.
             </p>
           </div>
 
@@ -90,7 +98,7 @@ export default function JockTaxPage() {
             <div className="space-y-3 text-sm text-neutral-dark/70">
               {[
                 { state: "California", rate: "High income tax", note: "Games against SJ, LA, ANA" },
-                { state: "New York", rate: "High income tax + NYC surcharge", note: "Games against NYR, NYI, BUF" },
+                { state: "New York", rate: "Graduated, to 10.9% at the top bracket", note: "No NYC tax on visiting players — repealed 1999" },
                 { state: "Minnesota", rate: "High income tax", note: "Games against MIN" },
                 { state: "Florida", rate: "No state income tax", note: "Games against FLA, TBL — no jock tax owed" },
                 { state: "Texas", rate: "No state income tax", note: "Games against DAL — no jock tax owed" },
@@ -164,8 +172,8 @@ export default function JockTaxPage() {
             {[
               "Track every game and duty day across all jurisdictions",
               "File in every required state and province",
-              "Maximize foreign tax credits and cross-state offsets",
-              "Evaluate residency strategies to minimize total tax burden",
+              "Coordinate foreign tax credits and cross-state offsets so the same dollar is not taxed twice",
+              "Evaluate residency strategies and what each one would actually require",
               "Coordinate with your CPA for a unified tax strategy",
               "Proactive planning for schedule changes and trades",
             ].map((item) => (

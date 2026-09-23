@@ -52,7 +52,7 @@ const faqCategories = [
     questions: [
       {
         q: "What is jock tax?",
-        a: "Every game you play in a different state or province triggers a separate tax obligation in that jurisdiction. Most NHL players file tax returns in 8-18 state and provincial jurisdictions per season, depending on division alignment, cross-border travel, and postseason play. Exact count varies year-to-year and by individual player. It's called the \"jock tax\" and it's the most expensive financial reality in professional hockey that most accountants have never heard of.",
+        a: "Playing a game in another state or province can create a tax obligation there — but not always. Five NHL states have no income tax at all (Florida, Texas, Tennessee, Nevada, Washington), and Washington, D.C. cannot tax visiting players. A typical NHL season creates a filing nexus in roughly 20 jurisdictions — about 13 states, 5 cities with their own income tax, and Canada per season, depending on division alignment, cross-border travel, and postseason play. Exact count varies year-to-year and by individual player. It's called the \"jock tax\" and it's the most expensive financial reality in professional hockey that most accountants have never heard of.",
       },
       {
         q: "How does cross-border US-Canada planning work?",
@@ -60,15 +60,15 @@ const faqCategories = [
       },
       {
         q: "What states do I need to file in?",
-        a: "Every state where you play a game and that state has an income tax. Most NHL players file in 8-18 state and provincial jurisdictions per season, depending on division alignment, cross-border travel, and postseason play — plus your home state, plus federal. Exact count varies year-to-year and by individual player. We track every game, every jurisdiction, and coordinate the whole thing.",
+        a: "Every state where you play a game and that state has an income tax. Most NHL players have a filing nexus in roughly 19 to 25 jurisdictions per season — about 13 states, 5 cities with their own income tax, and Canada, depending on division alignment, cross-border travel, and postseason play — plus your home state, plus federal. Exact count varies year-to-year and by individual player. We track every game, every jurisdiction, and coordinate the whole thing.",
       },
       {
         q: "How do signing bonuses get taxed?",
-        a: "Signing bonuses are generally taxed based on your state of residency at the time the bonus is paid — which is why residency planning matters so much in hockey. The timing and structure of a signing bonus can create significant tax planning opportunities if you're working with someone who understands the mechanics.",
+        a: "How a signing bonus is taxed depends on how it is drafted, not on one universal rule. New York, for example, will treat a bonus as allocable to your residence only if it is not contingent on performing services, is separately payable from salary, and is non-refundable — and other states take their own positions. That is precisely why the structure has to be settled before you sign rather than at tax time. The timing and structure of a signing bonus can create significant tax planning opportunities if you're working with someone who understands the mechanics.",
       },
       {
         q: "What about escrow and CBA provisions?",
-        a: "Under the current CBA, a portion of player salaries is held in escrow and may or may not be returned depending on league revenue. This affects your actual take-home pay and your tax planning. We factor escrow into every projection so the numbers reflect what you actually receive, not what the contract says on paper.",
+        a: "Under the CBA a portion of salary can be withheld in escrow so the revenue split between owners and players lands where it was agreed, and it may or may not come back depending on how hockey-related revenue performs. The withholding percentage is set under the CBA and has changed materially between seasons, so the number that applied to a teammate a few years ago is probably not the number that applies to you — ask what the current rate is before you budget against it. This affects your actual take-home pay and your tax planning. We factor escrow into every projection so the numbers reflect what you actually receive, not what the contract says on paper.",
       },
     ],
   },
