@@ -159,7 +159,7 @@ export default function WhyFlatFeePage() {
 
       <CTASection
         headline="Top shelf standards on the ice. Apply them to your money."
-        subtext="Book your Opening Faceoff call. We'll show you exactly what you'd pay and how much you'd save versus AUM."
+        subtext="Book your Opening Faceoff call. We'll show you exactly what you'd pay, and how that compares to what an AUM fee would cost at your asset level."
       />
     </>
   );

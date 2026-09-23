@@ -5,7 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 export const metadata: Metadata = {
   title: "The Jock Tax",
   description:
-    "The jock tax is the most expensive thing nobody talks to you about. How multi-state taxation works for hockey players and why most accountants miss it.",
+    "The jock tax is the most expensive thing nobody talks to you about. How multi-state taxation works for hockey players, and why it gets missed.",
 };
 
 export default function JockTaxPage() {
@@ -69,7 +69,7 @@ export default function JockTaxPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="How It Works"
-            title="The calculation most accountants get wrong."
+            title="How the calculation actually works."
             centered={false}
           />
           <div className="mt-6 space-y-5 text-neutral-dark/80 leading-relaxed">
@@ -134,16 +134,17 @@ export default function JockTaxPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="The Gap"
-            title="Why most accountants miss it."
+            title="Why it gets missed."
             centered={false}
           />
           <div className="mt-6 space-y-5 text-neutral-dark/80 leading-relaxed">
             <p>
-              Most CPAs have never worked with a professional athlete. They
-              don&apos;t know the jock tax exists, let alone how to file it
-              correctly across multiple jurisdictions. The result? Missed filings,
-              penalties, and overpayments players often don&apos;t see until the
-              cumulative cost lands later.
+              A CPA who does excellent work for business owners may simply
+              never have had a client whose income has to be split across twenty
+              jurisdictions, because almost nobody&apos;s does. It is not a
+              knowledge gap so much as a caseload gap — and what falls through it
+              is missed filings, penalties and overpayments that often do not
+              surface until years later.
             </p>
             <p>
               Some states are aggressive about enforcement. They track your game
@@ -171,7 +172,7 @@ export default function JockTaxPage() {
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               "Track every game and duty day across all jurisdictions",
-              "File in every required state and province",
+              "Know every state and province you owe a return in, so your CPA files a complete set",
               "Coordinate foreign tax credits and cross-state offsets so the same dollar is not taxed twice",
               "Evaluate residency strategies and what each one would actually require",
               "Coordinate with your CPA for a unified tax strategy",
@@ -202,8 +203,8 @@ export default function JockTaxPage() {
       </section>
 
       <CTASection
-        headline="Stop overpaying. Start with a conversation."
-        subtext="Book your Opening Faceoff call. We'll walk through your jock tax situation and show you what you might be leaving on the table."
+        headline="Find out where you actually stand."
+        subtext="Book your Opening Faceoff call. We'll walk through your jock tax situation and tell you plainly what we see."
       />
     </>
   );
