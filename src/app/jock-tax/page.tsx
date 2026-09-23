@@ -79,11 +79,14 @@ export default function JockTaxPage() {
               state gets a share based on the number of duty days you spent there.
             </p>
             <p>
-              But the details are where it gets complicated. Different states use
-              different allocation methods. Some count game days only. Some count
-              all duty days. Some use a &ldquo;games played&rdquo; ratio. And
-              some have de minimis thresholds that exempt athletes who earn below
-              a certain amount.
+              But the details are where it gets complicated. Duty days are the
+              United States standard, and the main alternative is gone &mdash; the
+              Ohio Supreme Court struck down Cleveland&apos;s games-played method
+              in <em>Hillenmeyer v. Cleveland</em> (2015). What still varies is
+              what counts as a duty day, and how each state treats filing
+              thresholds. Those thresholds generally govern whether a return is
+              required, not whether the income is taxable, and a player with
+              substantial total income usually files regardless.
             </p>
           </div>
 
@@ -94,7 +97,7 @@ export default function JockTaxPage() {
             <div className="space-y-3 text-sm text-neutral-dark/70">
               {[
                 { state: "California", rate: "High income tax", note: "Games against SJ, LA, ANA" },
-                { state: "New York", rate: "High income tax + NYC surcharge", note: "Games against NYR, NYI, BUF" },
+                { state: "New York", rate: "Graduated, to 10.9% at the top bracket", note: "No NYC tax on visiting players — repealed 1999" },
                 { state: "Minnesota", rate: "High income tax", note: "Games against MIN" },
                 { state: "Florida", rate: "No state income tax", note: "Games against FLA, TBL — no jock tax owed" },
                 { state: "Texas", rate: "No state income tax", note: "Games against DAL — no jock tax owed" },
@@ -168,7 +171,7 @@ export default function JockTaxPage() {
             {[
               "Track every game and duty day across all jurisdictions",
               "File in every required state and province",
-              "Maximize foreign tax credits and cross-state offsets",
+              "Coordinate foreign tax credits and cross-state offsets so the same dollar is not taxed twice",
               "Evaluate residency strategies to minimize total tax burden",
               "Coordinate with your CPA for a unified tax strategy",
               "Proactive planning for schedule changes and trades",

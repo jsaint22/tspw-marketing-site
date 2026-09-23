@@ -55,7 +55,7 @@ const tiers = [
     name: "Captain",
     subtitle:
       "For players whose legacy extends beyond the ice. Full family office coordination.",
-    range: "Total career earnings $10M+",
+    range: "Total career earnings above $10M",
     price: "Starting at $75,000",
     period: "/year",
     description:

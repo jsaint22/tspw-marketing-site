@@ -94,7 +94,7 @@ Appreciate you making time for the call today. A few things I took away:
 
 As promised, I'm sending over the quarterly financial planning brief we discussed. You'll have it by [day]. Feel free to share it with any of your players — it's designed to be useful without being a sales piece.
 
-I'm also mailing you a copy of *The Hockey Player's Money Playbook* — should arrive within the week. It covers the jock tax, compressed earning window, and post-career planning topics we talked about. If any of your players could benefit from it, I'm happy to send additional copies.
+I'm also sending the first-contract playbook we put together for players — a short guide to the jock tax, the compressed earning window and what gets decided before a contract is signed. It covers the jock tax, compressed earning window, and post-career planning topics we talked about. If any of your players could benefit from it, I'm happy to send additional copies.
 
 Next step from my end: I'll send the first quarterly brief at the start of next quarter. No ask. Just value.
 

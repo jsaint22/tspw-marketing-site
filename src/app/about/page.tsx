@@ -144,7 +144,7 @@ export default function AboutPage() {
           <div className="mt-6 space-y-5 text-neutral-dark/80 leading-relaxed">
             <p>
               Hockey players face a financial reality unlike almost anyone else.
-              You have 10 to 15 years to earn what most people earn over 40. The
+              You have eight to twelve years to earn what most people earn over 40. The
               jock tax alone is something most players overpay on without
               realizing it — and most accountants don&apos;t know it exists. Cross-border complexity between
               the US and Canada creates situations most financial advisors have
