@@ -53,8 +53,9 @@ export default function CrossBorderPage() {
               currency management.
             </p>
             <p>
-              The result? Players pay more tax than they need to. Sometimes
-              significantly more.
+              What that costs depends entirely on the player, and on which
+              provisions got missed. Sometimes nothing. Sometimes a great
+              deal.
             </p>
           </div>
         </div>
@@ -70,7 +71,7 @@ export default function CrossBorderPage() {
             {[
               {
                 title: "Treaty Provisions",
-                desc: "The US-Canada tax treaty contains specific provisions for athletes that most tax professionals have never read. Article XVI (Artistes and Athletes) is the provision most people reach for — and paragraph 3 expressly excludes players employed by a team in a league with regularly scheduled games in both countries, which means it does not govern NHL players. The provisions that actually apply are elsewhere in the treaty, and knowing which ones is the difference between a plan that holds and one that does not.",
+                desc: "The US-Canada tax treaty contains specific provisions for athletes that a generalist preparer has no particular reason to have read. Article XVI (Artistes and Athletes) is the provision most people reach for — and paragraph 3 expressly excludes players employed by a team in a league with regularly scheduled games in both countries, which means it does not govern NHL players. The provisions that actually apply are elsewhere in the treaty, and knowing which ones is the difference between a plan that holds and one that does not.",
               },
               {
                 title: "RRSP vs. 401(k) Decisions",
@@ -117,20 +118,21 @@ export default function CrossBorderPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Our Approach"
-            title="Cross-border planning isn't a referral. It's integrated."
+            title="We hold the strategy. A specialist files the returns."
             centered={false}
           />
           <div className="mt-6 space-y-5 text-neutral-dark/80 leading-relaxed">
             <p>
-              Most advisors who work with cross-border clients refer the tax
-              work to a specialist and hope it gets coordinated. That&apos;s not
-              planning. That&apos;s outsourcing.
+              Almost everyone in this situation needs a cross-border tax
+              specialist to prepare the returns, and so do you. The question is
+              who holds the strategy the returns are built on. Handing that off
+              with the paperwork is where plans come apart.
             </p>
             <p>
-              At Top Shelf Private Wealth, cross-border complexity is baked into
-              every decision we make — investment account selection, retirement
-              contributions, insurance structure, estate planning, and cash flow
-              management. It&apos;s not an add-on. It&apos;s foundational.
+              We hold it. The cross-border question sits inside every decision
+              we make with you — investment account selection, retirement
+              contributions, insurance structure, estate planning, cash flow. It
+              is not a separate workstream we bolt on at tax time.
             </p>
             <p>
               We coordinate with cross-border tax specialists, but we drive the

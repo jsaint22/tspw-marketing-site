@@ -33,7 +33,7 @@ export default function JockTaxPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="What It Is"
-            title="A tax on every game you play away from home."
+            title="A tax on the days you work in someone else's state."
             centered={false}
           />
           <div className="mt-6 space-y-5 text-neutral-dark/80 leading-relaxed">
